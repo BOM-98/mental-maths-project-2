@@ -83,3 +83,55 @@ function runGame(gameType){
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
 }
+
+
+/**
+ * The `checkAnswer` function validates the user's answer against the correct answer.
+ * It first gets the user's answer from the input field and parses it as an integer.
+ * Then, it calculates the correct answer and checks if the user's answer is equal to the correct answer.
+ * Depending on whether the answer is correct, it shows an appropriate alert message.
+ * Finally, it starts a new round of the game with a randomly decided game type.
+ */
+function checkAnswer(){
+
+    // Get the user's answer from input field and parse it as an integer
+    let userAnswer = parseInt(document.getElementById('answer').value);
+
+    // Calculate the correct answer
+    let calculatedAnswer = calculateCorrectAnswer();
+
+    // Check if the user's answer is equal to the correct answer
+    let isCorrect = userAnswer === calculatedAnswer;
+
+    // If the answer is correct, display a congratulatory message
+    // Otherwise, display a message showing the correct answer
+    if(isCorrect){
+        alert("Correct Answer - Well Done!");
+    } else {
+        alert(`${userAnswer} is incorrect. The correct answer was ${calculatedAnswer}!`);
+    };
+
+    // Start a new round of the game with a randomly decided game type
+    runGame(gameDecider());
+}
+
+
+function calculateCorrectAnswer(){
+    let operand1 = parseInt(document.getElementById('operand1').innerText);
+    let operand2 = parseInt(document.getElementById('operand2').innerText);
+    let operator = document.getElementById('operator').innerText;
+
+    if(operator === "+"){
+        return operand1 + operand2;
+    } else if (operator === "-"){
+        return operand1 - operand2;
+    } else if (operator === "*"){
+        return operand1 * operand2;
+    } else if (operator === "/"){
+        return operand1 / operand2;
+    } else {
+        alert(`Unimplemented operator ${operator}`);
+        throw `Unimplemented operator ${operator}. Aborting!`;
+    }
+
+}
