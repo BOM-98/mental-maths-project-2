@@ -117,8 +117,10 @@
     margin: 2rem 0;
   }
 
-  .sum h2, .sum p {
+  .sum span {
     color: var(--global-color-background-grey);
+    font-size: 1.5rem;
+    padding: 0 0.25rem;
   }
 
   .answer {
@@ -142,7 +144,7 @@
   }
 
   .answer input {
-    width: 80%;
+    width: 100%;
     min-height: 15vh;
     padding: 0.5rem;
     border: 1px solid var(--global-color-primary-blue);
@@ -235,10 +237,6 @@
   .answer-and-input{
     margin: 0;
     justify-content: center;
-  }
-
-  .answer-and-input h2{
-    display: none;
   }
 
   #answer {
