@@ -38,7 +38,8 @@
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-    width: 75%;
+    width: 95%;
+    max-width: 1000px;
     min-width: fit-content;
   }
 
@@ -56,12 +57,13 @@
   .question {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
     text-align: center;
     padding: 1rem 2rem;
     width: fit-content;
     max-width: 25vw;
+    max-height: fit-content;
     background-color: var(--global-color-background-grey);
   }
 
@@ -73,7 +75,8 @@
     background-color: var(--global-color-highlight-white);
     border-radius: 16px;
     padding: 16px;
-    width: 100%;
+    width: 95%;
+    max-width: 1000px;
     margin: 16px;
     box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
   }
@@ -98,22 +101,73 @@
     border-radius: 16px;
   }
 
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+   
+
   .sum {
     background-color: var(--global-color-primary-blue);
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 32px 0px;
+    margin: 2rem 0;
+  }
+
+  .sum h2, .sum p {
+    color: var(--global-color-background-grey);
   }
 
   .answer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     background-color: var(--global-color-background-grey);
+  }
+
+  .answer-and-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .answer input {
+    width: 80%;
+    min-height: 15vh;
+    padding: 0.5rem;
+    border: 1px solid var(--global-color-primary-blue);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #submit {
+    background-color: var(--global-color-primary-blue);
+    border: none;
+    min-height: 5vh;
+    color: var(--global-color-highlight-white);
+    font-family: var(--global-font-family);
+    font-size: 1rem;
+    padding: 1rem 0;
+    width: 50%;
+    align-self: center;
+    margin: 2rem 0;
   }
   
 
