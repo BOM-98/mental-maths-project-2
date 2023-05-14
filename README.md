@@ -108,11 +108,30 @@ All design decisions incorporated into the web app were made keeping these targe
 
 ### Colour Scheme
 
-I chose this colour scheme keeping in mind the need for a contrast between colours on the website for accessibility. The strong Red Violet primary colour is intended to be striking and attention-grabbing relative to the Eerie black background and convey the symbol of risk and danger for a journey that many of these entrepreneurs will embark on, but gladly embrace.
+1. Primary Color: Navy Blue (#1c3d5a)
+   - Represents trust, professionalism, and intelligence. Perfect for conveying the educational and cognitive improvement aspects of the website.
 
-As a point of note, some contrast checkers threw errors on the use of the Red Violet colour on the background of Eerie black. This was done very sparingly in the hero section, footer section, and animated sections of forms to highlight one or two words or underline active links. I made the choice, aesthetically speaking, to leave the colours as they were, as I believe they did not hinder readability or accessibility significantly enough to warrant changing them. The aesthetic outcome was prioritized in this case, as I believe there was still a significant enough contract for people to easily identify the words. The other elements surrounding the words had a strong contrast with the background and made it obvious that there was a word there.  
+2. Secondary Color: Sky Blue (#71a6d2)
+   - A lighter, more approachable shade of blue that complements the primary color. It can be used for buttons, links, and other interactive elements to create a sense of engagement and accessibility.
 
-![Colour Palette](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/colour-pallette-image.png)
+3. Accent Color: Coral (#ff6b6b)
+   - A warm, energetic color that contrasts with the blue tones. It can be used to highlight important information, call-to-action buttons, or progress indicators.
+
+4. Background Color: Off-White (#f5f5f5)
+   - This off-white color maintains a clean, neutral backdrop for content while reducing eye strain caused by the high contrast of pure white. It also maintains sufficient contrast with the text color (Dark Gray) to ensure readability and accessibility.
+
+5. Text Color: Dark Gray (#333333)
+   - A softer alternative to black that maintains high contrast with the white background for easy readability.
+
+Accessibility and contrast considerations:
+
+When designing the website, it's crucial to ensure that the color contrast ratios meet the Web Content Accessibility Guidelines (WCAG) standards. This will guarantee that users with visual impairments can easily access and navigate the site.
+
+In this color palette, the primary color (Navy Blue) and secondary color (Sky Blue) provide sufficient contrast against the white background. However, the accent color (Coral) is used sparingly and with caution, as it may not provide enough contrast against the white background for some users.
+
+Overall, this color palette provides a professional, engaging, and accessible experience for users, ensuring that the site's design aligns with its purpose and target personas.
+
+![Colour Palette](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/colour-pallette-image.png) - TO CHANGE THIS IMAGE
 
 ### Typography
 
@@ -376,6 +395,11 @@ While attempting to implement form validation on the forms in each html page, I 
 ![Form Validation Bug](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/email-validation-bug.png).
 
 ## Credits
+
+### Resources
+
+- Codecademy provide a free online course [Introduction to UI and UX Design](https://www.codecademy.com/courses/intro-to-ui-ux/informationals/ui-and-ux-welcome) which taught me the basics of how to design prototypes on Figma. This came in very handy during this project as I wireframed by web app and thought through the color scheme and typography choices I had to make.
+- Designing the website followed the [10 usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) from the Nielsen Norman Group to ensure my web app was easy to navigate, understand and learn from. 
 
 ### Layouts
 
