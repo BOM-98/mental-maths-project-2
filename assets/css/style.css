@@ -1,4 +1,119 @@
-font-family: 'Lato', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Neuton:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --global-font-family: Montserrat, Neuton;
+    --global-text-color-black: #1E1E1E;
+    --global-primary-title-size: 2rem;
+    --global-color-primary-blue: #67AEF4;
+    --global-color-secondary-green: rgb(9, 206, 40, 0.7);
+    --global-color-background-grey: #F3F4F5;
+    --global-color-highlight-white: #FFFFFF;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--global-font-family);
+    height: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--global-text-color-black);
+    background-color: var(--global-color-background-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header {
+    margin: 25px 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    min-width: fit-content;
+  }
+
+
+  .stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 36px 16px;
+    width: 100%;
+  }
+
+  .time, 
+  .level, 
+  .question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem 2rem;
+    width: fit-content;
+    max-width: 25vw;
+    background-color: var(--global-color-background-grey);
+  }
+
+  .stat {
+    padding: 0 2rem;
+  }
+
+  .white-container{
+    background-color: var(--global-color-highlight-white);
+    border-radius: 16px;
+    padding: 16px;
+    width: 100%;
+    margin: 16px;
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
+  }
+
+  .green-container{
+    background-color: var(--global-color-secondary-green);
+    border-radius: 16px;
+    width: fit-content;
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
+  }
+
+  .green-container p{
+    color: var(--global-color-background-grey);
+  }
+
+  #percentage {
+    padding: 28px 32px;
+  }
+
+  .neomorphic {
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
+    border-radius: 16px;
+  }
+
+  .sum {
+    background-color: var(--global-color-primary-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 32px 0px;
+  }
+
+  .answer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: var(--global-color-background-grey);
+  }
+  
+
