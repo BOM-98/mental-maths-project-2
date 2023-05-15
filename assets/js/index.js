@@ -1,40 +1,10 @@
+
+
 //Wait for the DOM to finish loading before running the game
-//Get the button elements and add event listeres to them
+//Get the button elements and add event listeners to them
+
 
 document.addEventListener("DOMContentLoaded", function () {
-  let buttons = document.getElementsByTagName("button");
-
-  for (let button of buttons) {
-    button.addEventListener("click", function () {
-      if (this.getAttribute("data-type") === "submit") {
-        checkAnswer();
-      }
-    });
-  }
-
-  /**
-   * The `gameDecider` function determines the type of arithmetic operation for the game.
-   * It generates a random number between 1 and 4 (inclusive), each representing a different operation.
-   *
-   * @returns {string} The type of arithmetic operation for the game.
-   * "addition" if the generated number is 1,
-   * "subtract" if the generated number is 2,
-   * "multiply" if the generated number is 3,
-   * "division" if the generated number is 4.
-   */
-  function gameDecider() {
-    let typeNumber = Math.floor(Math.random() * 4) + 1;
-
-    if (typeNumber === 1) {
-      return "addition";
-    } else if (typeNumber === 2) {
-      return "subtract";
-    } else if (typeNumber === 3) {
-      return "multiply";
-    } else if (typeNumber === 4) {
-      return "division";
-    }
-  }
 
   document
     .getElementById("answer")
@@ -84,6 +54,11 @@ function runGame(gameType){
     }
 }
 
+function incrementQuestion (){
+    let questionNumber = parseInt(document.getElementById('question').innerText);
+    questionNumber++;
+    document.getElementById('question').innerText = questionNumber;
+}
 
 /**
  * The `checkAnswer` function validates the user's answer against the correct answer.
@@ -107,8 +82,10 @@ function checkAnswer(){
     // Otherwise, display a message showing the correct answer
     if(isCorrect){
         alert("Correct Answer - Well Done!");
+        incrementQuestion();
     } else {
         alert(`${userAnswer} is incorrect. The correct answer was ${calculatedAnswer}!`);
+        incrementQuestion();
     };
 
     // Start a new round of the game with a randomly decided game type
@@ -160,3 +137,27 @@ function displayDivisionQuestion(operand1, operand2){
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "/";
 }
+
+/**
+   * The `gameDecider` function determines the type of arithmetic operation for the game.
+   * It generates a random number between 1 and 4 (inclusive), each representing a different operation.
+   *
+   * @returns {string} The type of arithmetic operation for the game.
+   * "addition" if the generated number is 1,
+   * "subtract" if the generated number is 2,
+   * "multiply" if the generated number is 3,
+   * "division" if the generated number is 4.
+   */
+let gameDecider = function () {
+    let typeNumber = Math.floor(Math.random() * 4) + 1;
+
+    if (typeNumber === 1) {
+      return "addition";
+    } else if (typeNumber === 2) {
+      return "subtract";
+    } else if (typeNumber === 3) {
+      return "multiply";
+    } else if (typeNumber === 4) {
+      return "division";
+    }
+  };
