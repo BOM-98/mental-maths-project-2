@@ -14,6 +14,8 @@
     --global-color-secondary-green: rgb(9, 206, 40, 0.7);
     --global-color-background-grey: #F3F4F5;
     --global-color-highlight-white: #FFFFFF;
+    --global-color-warning-amber: rgba(237, 91, 1, 0.7);
+    --global-color-warning-red: rgba(255, 0, 0, 0.7);
   }
   
   html {

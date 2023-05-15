@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
           checkAnswer();
         }
       });
+
+      document.getElementById("submit").addEventListener("click", function () {
+        checkAnswer();
+      });
+
+      timer.start();
   
       //Run the game with the input from the gameDecider function determining whether the sum will be addition, subtraction, multiplication or division
     runGame(gameDecider());
@@ -46,6 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (gameType === "multiply"){
           displayMultiplyQuestion(num1, num2);
       } else if (gameType === "division"){
+        if (num1 < num2){
+	        let placeholder = num2;
+	        num2 = num1;
+	        num1 = placeholder;
+	    }
+        if (num1 % num2 !== 0){
+            num1 = numeratorGenerator(num2);
+        }
           displayDivisionQuestion(num1, num2);
       } else {
           // If the gameType is not recognized, display an error message and throw an error
@@ -71,6 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // Get the user's answer from input field and parse it as an integer
       let userAnswer = parseInt(document.getElementById('answer').value);
+
+      //check if the user has entered a number
+        if (isNaN(userAnswer)) {
+            alert("Please enter a number");
+            return;
+        };
   
       // Calculate the correct answer
       let calculatedAnswer = calculateCorrectAnswer();
@@ -90,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // Start a new round of the game with a randomly decided game type
       runGame(gameDecider());
+      timer.reset();
   }
   
   
@@ -161,3 +182,29 @@ document.addEventListener("DOMContentLoaded", function () {
         return "division";
       }
     };
+
+    function numeratorGenerator(num2){
+        let numerator =  num2 * Math.floor(Math.random() * 25) + 1;
+        return numerator;
+    };
+
+
+   let timer =  {
+        time: 60,
+        secondInterval: 1000,
+        start: function intervalSetter (){setInterval(function(){
+                timer.time--;
+                document.getElementById('time').innerHTML = timer.time;
+                if (timer.time > 40){
+                    document.getElementsByClassName('time')[0].style.backgroundColor = "var(--global-color-secondary-green )";
+                } else if (timer.time > 10 && timer.time <= 40){
+                    document.getElementsByClassName('time')[0].style.backgroundColor = "var(--global-color-warning-amber)";
+                } else {
+                    document.getElementsByClassName('time')[0].style.backgroundColor = "var(--global-color-warning-red)";
+                }
+        } , 1000)},
+
+        reset: function(){
+            timer.time = 60;
+        }
+    }
