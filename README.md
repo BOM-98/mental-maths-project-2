@@ -403,12 +403,7 @@ While attempting to implement form validation on the forms in each html page, I 
 
 ### Layouts
 
-- Inspiration for the hero section and the layout of the blog pages was taken from [Interneting is Hard](https://internetingishard.netlify.app/index.html).  A lot of the design was customized and not copied, in particular the hero section, however, the wireframe was initially inspired by the Interneting is Hard website design.
-- General instructions on how to create a toggleable tab navigation section were taken from [W3 Schools](https://www.w3schools.com/howto/howto_js_tabs.asp). The general logic behind the code was learned from this site, but the implemented version was highly customized and altered to suit the site. 
--  How to structure and style the logic form was taken from [Coding Stella's Codepen](https://codepen.io/codingstella/pen/LYJKQxB). Small adjustments to the form inputs and colour were added to the style. 
-- How to create a sticky aside was learned from [W3 Schools](https://www.w3schools.com/howto/howto_js_sticky_header.asp). I reverse-engineered how the sticky navigation operated from that website and copied some of the element IDs - however, the section was styled very differently and javascript logic was added with event listeners to ensure the side navigation disappeared once the user scrolled down far enough on the site.
-- How to generally style the cards used in the blog home page was learned from [W3 Schools](https://www.w3schools.com/howto/howto_css_cards.asp). The general layout for the cards was drawn from here, however, I had to use Flexbox to reorganize the elements within the cards and completely change the design.
-- The scroll-to-top indicator code was found in [W3schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp). I took this code and javascript and adjusted the styling to fit the branding of the website. The javascript was also adjusted to move all scripts to app.js instead of having inline javascript. 
+- How to create a timer object that decrements the time was learned from [stackoverflow](https://stackoverflow.com/questions/8126466/how-do-i-reset-the-setinterval-timer).
 
 ### Blog Content
 

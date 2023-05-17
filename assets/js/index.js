@@ -3,6 +3,8 @@
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 
+let answerArray = [];
+let answerInstance;
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -68,12 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   }
   
-  function incrementQuestion (){
-      let questionNumber = parseInt(document.getElementById('question').innerText);
-      questionNumber++;
-      document.getElementById('question').innerText = questionNumber;
-  }
-  
   /**
    * The `checkAnswer` function validates the user's answer against the correct answer.
    * It first gets the user's answer from the input field and parses it as an integer.
@@ -97,15 +93,20 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // Check if the user's answer is equal to the correct answer
       let isCorrect = userAnswer === calculatedAnswer;
+
+      answerInstance = answerObject(userAnswer, calculatedAnswer, parseInt(document.getElementById('question').innerText), isCorrect, timer.time);
+        answerArray.push(answerInstance);
   
       // If the answer is correct, display a congratulatory message
       // Otherwise, display a message showing the correct answer
       if(isCorrect){
           alert("Correct Answer - Well Done!");
           incrementQuestion();
+          updatePercentage();
       } else {
           alert(`${userAnswer} is incorrect. The correct answer was ${calculatedAnswer}!`);
           incrementQuestion();
+            updatePercentage();
       };
   
       // Start a new round of the game with a randomly decided game type
@@ -184,7 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function numeratorGenerator(num2){
-        let numerator =  num2 * Math.floor(Math.random() * 25) + 1;
+        let multiplier = Math.floor(Math.random() * 25) + 2;
+        let numerator = num2 * multiplier;
         return numerator;
     };
 
@@ -207,4 +209,50 @@ document.addEventListener("DOMContentLoaded", function () {
         reset: function(){
             timer.time = 60;
         }
+    }
+
+
+
+    const answerObject = (answer, correctAnswer, questionNumber,  isCorrect, time) => {
+
+        let passed; 
+
+        if (isCorrect === true && time > 0){
+            passed = true;
+        } else {
+            passed = false;
+        }
+
+        return {
+            answer: answer,
+            correctAnswer: correctAnswer,
+            questionNumber: questionNumber,
+            isCorrect: isCorrect,
+            time: time,
+            passes: passed
+        }
+    }
+
+    function updatePercentage (){
+        let percentPasses = Math.round((answerArray.filter(answer => answer.passes === true).length / answerArray.length) * 100);
+        if (isNaN(percentPasses)){
+            percentPasses = 0;
+        } else {
+        document.getElementById('percentage').innerText = percentPasses + "%";
+        };
+
+        if (percentPasses > 85){
+            document.getElementsByClassName('green-container')[0].style.backgroundColor = "var(--global-color-secondary-green )";
+        } else if (percentPasses > 60){
+            document.getElementsByClassName('green-container')[0].style.backgroundColor = "var(--global-color-warning-amber)";
+        } else {
+            document.getElementsByClassName('green-container')[0].style.backgroundColor = "var(--global-color-warning-red)";
+        }
+    }
+
+
+    function incrementQuestion (){
+        let questionNumber = parseInt(document.getElementById('question').innerText);
+        questionNumber++;
+        document.getElementById('question').innerText = questionNumber;
     }
