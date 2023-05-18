@@ -256,3 +256,96 @@ document.addEventListener("DOMContentLoaded", function () {
         questionNumber++;
         document.getElementById('question').innerText = questionNumber;
     }
+
+
+    let digitParameters = {
+        addition: {
+            1: {
+                num1: {min: 1, max: 100},
+                num2: {min: 1, max: 10}
+            },
+            2: {
+                num1: {min: 10, max: 100},
+                num2: {min: 10, max: 100}
+            },
+            3: {
+                num1: {min: 100, max: 1000},
+                num2: {min: 10, max: 100}
+            },
+            4: {
+                num1: {min: 1000, max: 10000},
+                num2: {min: 100, max: 1000}
+            },
+            5: {
+                num1: {min: 10000, max: 100000},
+                num2: {min: 1000, max: 10000}
+            }
+    },
+        subtract: {
+            1: {
+                num1: {min: 1, max: 100},
+                num2: {min: 1, max: 10}
+            },
+            2: {
+                num1: {min: 10, max: 100},
+                num2: {min: 10, max: 100}
+            },
+            3: {
+                num1: {min: 100, max: 1000},
+                num2: {min: 10, max: 100}
+            },
+            4: {
+                num1: {min: 1000, max: 10000},
+                num2: {min: 100, max: 1000}
+            },
+            5: {
+                num1: {min: 10000, max: 100000},
+                num2: {min: 1000, max: 10000}
+            }
+    },
+        multiply: {
+            1: {
+                num1: {min: 1, max: 12},
+                num2: {min: 1, max: 12}
+            },
+            2: {
+                num1: {min: 1, max: 100},
+                num2: {min: 1, max: 12}
+            },
+            3: {
+                num1: {min: 1, max: 100},
+                num2: {min: 1, max: 100}
+            }, 
+            4: {
+                num1: {min: 1, max: 1000},
+                num2: {min: 1, max: 100}
+            },
+            5: {
+                num1: {min: 1, max: 1000},
+                num2: {min: 1, max: 1000}
+            }
+    },
+        division: {
+            1: {
+                num1: {min: 1, max: 12},
+                num2: {min: 1, max: 12}
+            },
+            2: {
+                num1: {min: 1, max: 100},
+                num2: {min: 1, max: 12}
+            },
+            3: {
+                num1: {min: 1, max: 10000},
+                num2: {min: 1, max: 100}
+            },
+            4: {
+                num1: {min: 1, max: 100000},
+                num2: {min: 1, max: 100}
+            },
+            5: {
+                num1: {min: 1, max: 1000000},
+                num2: {min: 1, max: 1000}
+            }
+    }
+    }
+
