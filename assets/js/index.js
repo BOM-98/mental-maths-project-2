@@ -5,7 +5,7 @@
 
 let answerArray = [];
 let answerInstance;
-let gameLevel;
+let gameLevel = parseInt(document.getElementById("level").innerText);
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById('answer').focus();
   
       // Creates two random numbers between 1 and 25
-      let num1 = Math.floor(Math.random() * 25) + 1;
-      let num2 = Math.floor(Math.random() * 25) + 1;
+      let num1 = generateNum1(gameType, gameLevel);
+      let num2 = generateNum2(gameType, gameLevel);
   
       // Depending on the gameType, display the appropriate question
       if(gameType === "addition"){
@@ -109,6 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
           incrementQuestion();
             updatePercentage();
       };
+
+      adJustLevel();
   
       // Start a new round of the game with a randomly decided game type
       runGame(gameDecider());
@@ -260,13 +262,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function adJustLevel() {
-        let gameLevel = parseInt(document.getElementById('level').innerText);
+        gameLevel = parseInt(document.getElementById('level').innerText);
+        let lastFiveElements = answerArray.slice(-5);
+        let allSameLevel = lastFiveElements.every(answer => answer.level === gameLevel);
+        let passes = answerArray.filter(answer => answer.passes === true).length;
+        let check1 = answerArray.filter(answer => answer.passes === true).length;
+        let check2 = answerArray.filter(answer => answer.passes === true).length / answerArray.length;
+        let check3 = answerArray.slice(-5).filter(answer => {
+            answer.level === gameLevel;
+        }).length;
+
         if (answerArray.length < 5) {
             return 0;
         } else {
-            if (answerArray.filter(answer => answer.passes === true).length / answerArray.length >= 0.85 && answerArray.slice(-5).filter(answer => {
-                return answer.gameLevel === gameLevel;
-            }).length >= 5) {
+            if (passes / answerArray.length >= 0.85 && allSameLevel) {
                 gameLevel++;
                 document.getElementById('level').innerText = gameLevel;
                 return gameLevel;
@@ -275,6 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+
 
 
 
@@ -347,7 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
     },
         division: {
-        21: {
+            1: {
                 num1: {min: 1, max: 12},
                 num2: {min: 1, max: 12}
             },
@@ -372,8 +382,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let gameLevelSettings = [
         // Levels 0-1: Basic Level Addition and Subtraction
-        /*0*/ [digitParameters.addition[1], digitParameters.subtract[1]],
-        /*1*/[digitParameters.addition[2], digitParameters.subtract[2]],
+        /*0*/ [digitParameters.addition[1], digitParameters.subtract[1],digitParameters.multiply[1], digitParameters.division[1]],
+        /*1*/[digitParameters.addition[2], digitParameters.subtract[2], digitParameters.multiply[1], digitParameters.division[1]],
     
         // Levels 2-11: Intermediate Level Addition, Subtraction, Multiplication, Division
         /*2*/[digitParameters.addition[2], digitParameters.subtract[2], digitParameters.multiply[1], digitParameters.division[1]],
@@ -397,12 +407,32 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     function generateNum1 (gameType, level){
-        let num1 = Math.floor(Math.random() * (gameLevelSettings[level][gameType].num1.max - gameLevelSettings[level][gameType].num1.min + 1)) + gameLevelSettings[level][gameType].num1.min;
-        return num1;
+        let index;
+        if (gameType === "addition"){
+            index = 0;
+        } else if (gameType === "subtract"){
+            index = 1;
+        } else if (gameType === "multiply"){
+            index = 2;
+        } else if (gameType === "division"){
+            index = 3;
+        }
+
+        let returnNum1 = Math.floor(Math.random() * (gameLevelSettings[level][index].num1.max - gameLevelSettings[level][index].num1.min + 1)) + gameLevelSettings[level][index].num1.min;
+        return returnNum1;
     }
 
     function generateNum2 (gameType, level){
-        let num2 = Math.floor(Math.random() * (gameLevelSettings[level][gameType].num2.max - gameLevelSettings[level][gameType].num2.min + 1)) + gameLevelSettings[level][gameType].num2.min;
+        if (gameType === "addition"){
+            index = 0;
+        } else if (gameType === "subtract"){
+            index = 1;
+        } else if (gameType === "multiply"){
+            index = 2;
+        } else if (gameType === "division"){
+            index = 3;
+        }
+        let num2 = Math.floor(Math.random() * (gameLevelSettings[level][index].num2.max - gameLevelSettings[level][index].num2.min + 1)) + gameLevelSettings[level][index].num2.min;
         return num2;
     }
 
