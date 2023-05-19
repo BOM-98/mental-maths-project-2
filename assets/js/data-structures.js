@@ -99,7 +99,7 @@ export let gameLevelSettings = [
   ],
   /*1*/ [
     digitParameters.addition[2],
-    digitParameters.subtract[2],
+    digitParameters.subtract[1],
     digitParameters.multiply[1],
     digitParameters.division[1],
   ],
@@ -246,6 +246,5 @@ export const answerObject = (answer, correctAnswer, questionNumber,  isCorrect, 
         level: level
     }
 }
-
 
 

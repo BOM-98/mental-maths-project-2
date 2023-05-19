@@ -400,6 +400,8 @@ While attempting to implement form validation on the forms in each html page, I 
 
 - Codecademy provide a free online course [Introduction to UI and UX Design](https://www.codecademy.com/courses/intro-to-ui-ux/informationals/ui-and-ux-welcome) which taught me the basics of how to design prototypes on Figma. This came in very handy during this project as I wireframed by web app and thought through the color scheme and typography choices I had to make.
 - Designing the website followed the [10 usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) from the Nielsen Norman Group to ensure my web app was easy to navigate, understand and learn from.
+- Unit testing was implemented by following Codecademy's course on [Javascript Testing](https://www.codecademy.com/career-journey/full-stack-engineer/path/fscj-22-front-end-development/track/fscj-22-javascript-testing).
+- Implementing modules using ES6 Syntax was done by following Codecademy's course on [Javascript Modules](https://www.codecademy.com/journeys/full-stack-engineer/paths/fscj-22-front-end-development/tracks/fscj-22-javascript-syntax-part-iii/modules/wdcp-22-learn-javascript-syntax-modules-7ac62a4b-087e-4517-9b13-cc0e94b8495d/articles/implementing-modules-using-es-6-syntax).
 
 
 ### Layouts
