@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Check if the user's answer is equal to the correct answer
       let isCorrect = userAnswer === calculatedAnswer;
 
-      answerInstance = answerObject(userAnswer, calculatedAnswer, parseInt(document.getElementById('question').innerText), isCorrect, timer.time);
+      answerInstance = answerObject(userAnswer, calculatedAnswer, parseInt(document.getElementById('question').innerText), isCorrect, timer.time, parseInt(document.getElementById('level').innerText));
         answerArray.push(answerInstance);
   
       // If the answer is correct, display a congratulatory message
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    const answerObject = (answer, correctAnswer, questionNumber,  isCorrect, time) => {
+    const answerObject = (answer, correctAnswer, questionNumber,  isCorrect, time, level) => {
 
         let passed; 
 
@@ -230,7 +230,8 @@ document.addEventListener("DOMContentLoaded", function () {
             questionNumber: questionNumber,
             isCorrect: isCorrect,
             time: time,
-            passes: passed
+            passes: passed,
+            level: level
         }
     }
 
@@ -257,6 +258,25 @@ document.addEventListener("DOMContentLoaded", function () {
         questionNumber++;
         document.getElementById('question').innerText = questionNumber;
     }
+
+    function adJustLevel() {
+        let gameLevel = parseInt(document.getElementById('level').innerText);
+        if (answerArray.length < 5) {
+            return 0;
+        } else {
+            if (answerArray.filter(answer => answer.passes === true).length / answerArray.length >= 0.85 && answerArray.slice(-5).filter(answer => {
+                return answer.gameLevel === gameLevel;
+            }).length >= 5) {
+                gameLevel++;
+                document.getElementById('level').innerText = gameLevel;
+                return gameLevel;
+            } else {
+                return gameLevel;
+            }
+        }
+    }
+
+
 
 
     let digitParameters = {
@@ -377,5 +397,12 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     function generateNum1 (gameType, level){
+        let num1 = Math.floor(Math.random() * (gameLevelSettings[level][gameType].num1.max - gameLevelSettings[level][gameType].num1.min + 1)) + gameLevelSettings[level][gameType].num1.min;
+        return num1;
+    }
+
+    function generateNum2 (gameType, level){
+        let num2 = Math.floor(Math.random() * (gameLevelSettings[level][gameType].num2.max - gameLevelSettings[level][gameType].num2.min + 1)) + gameLevelSettings[level][gameType].num2.min;
+        return num2;
     }
 
