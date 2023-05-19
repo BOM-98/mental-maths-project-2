@@ -9,6 +9,12 @@ let gameLevel = parseInt(document.getElementById("level").innerText);
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    modal.style.display = "block";
+
+  });
+
+function beginGame() {
+    modal.style.display = "none";
     document
       .getElementById("answer")
       .addEventListener("keydown", function (event) {
@@ -25,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       //Run the game with the input from the gameDecider function determining whether the sum will be addition, subtraction, multiplication or division
     runGame(gameDecider());
-  });
+}
   
   
   /**
@@ -436,3 +442,32 @@ document.addEventListener("DOMContentLoaded", function () {
         return num2;
     }
 
+
+
+    /*The Modal*/
+
+    // Get the modal
+let modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+let startButton = document.getElementById("start");
+
+startButton.onclick = function() {
+    beginGame();
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  beginGame();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    beginGame();
+  }
+}
