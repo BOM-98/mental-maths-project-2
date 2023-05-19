@@ -247,9 +247,5 @@ export const answerObject = (answer, correctAnswer, questionNumber,  isCorrect, 
     }
 }
 
-export function incrementQuestion (){
-    let questionNumber = parseInt(document.getElementById('question').innerText);
-    questionNumber++;
-    document.getElementById('question').innerText = questionNumber;
-}
+
 
