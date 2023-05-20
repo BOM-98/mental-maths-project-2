@@ -1,5 +1,5 @@
 import { digitParameters, gameLevelSettings, timer , answerObject } from "./data-structures.js";
-import { calculateCorrectAnswer, gameDecider, numeratorGenerator, incrementQuestion, displayAdditionQuestion, displayDivisionQuestion, displayMultiplyQuestion, displaySubtractQuestion, updatePercentage, generateNum1, generateNum2, adJustLevel } from "./math-functions.js";
+import { calculateCorrectAnswer, gameDecider, numeratorGenerator, incrementQuestion, displayAdditionQuestion, displayDivisionQuestion, displayMultiplyQuestion, displaySubtractQuestion, updatePercentage, generateNum1, generateNum2, adjustLevel } from "./math-functions.js";
 
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
@@ -117,7 +117,7 @@ function beginGame() {
             updatePercentage();
       };
 
-      adJustLevel();
+      adjustLevel();
   
       // Start a new round of the game with a randomly decided game type
       runGame(gameDecider());

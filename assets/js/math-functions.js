@@ -131,16 +131,11 @@ export function generateNum2 (gameType, level){
     return num2;
 }
 
-export function adJustLevel() {
+export function adjustLevel() {
     gameLevel = parseInt(document.getElementById('level').innerText);
     let lastFiveElements = answerArray.slice(-5);
     let allSameLevel = lastFiveElements.every(answer => answer.level === gameLevel);
     let passes = answerArray.filter(answer => answer.passes === true).length;
-    let check1 = answerArray.filter(answer => answer.passes === true).length;
-    let check2 = answerArray.filter(answer => answer.passes === true).length / answerArray.length;
-    let check3 = answerArray.slice(-5).filter(answer => {
-        answer.level === gameLevel;
-    }).length;
 
     if (answerArray.length < 5) {
         return 0;

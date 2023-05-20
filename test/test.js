@@ -1,7 +1,8 @@
 import { assert } from 'chai';
 import sinon from 'sinon';
-import {generateNum1} from '../assets/js/math-functions.js';
+import {generateNum1, adjustLevel} from '../assets/js/math-functions.js';
 import {gameLevelSettings} from '../assets/js/data-structures.js';
+import{JSDOM} from 'jsdom';
 
 describe('generateNum1 function', function() {
 
@@ -325,3 +326,7 @@ describe('generateNum1 function', function() {
   });
 });
 });
+
+
+
+
