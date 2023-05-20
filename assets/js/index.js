@@ -4,8 +4,8 @@ import { calculateCorrectAnswer, gameDecider, numeratorGenerator, incrementQuest
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 
-let answerArray = [];
-let answerInstance;
+export let answerArray = [];
+export let answerInstance;
 let gameLevel = parseInt(document.getElementById("level").innerText);
 
 document.addEventListener("DOMContentLoaded", function () {

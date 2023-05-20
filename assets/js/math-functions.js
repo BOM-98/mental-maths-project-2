@@ -1,5 +1,16 @@
 import {timer, digitParameters, gameLevelSettings} from "./data-structures.js";
+import {answerArray} from "./index.js";
 
+/**
+ * Calculate the result of the operation.
+ * This function fetches operand1, operand2, and operator from the HTML document.
+ * It then performs the corresponding operation and returns the result.
+ * For the operators '+', '-', 'x', and '/', the operation is performed and the result returned.
+ * For any other operator, an alert is shown and an error is thrown.
+ *
+ * @returns {Number} - The result of the operation.
+ * @throws {String} - If the operator is not supported.
+ */
 export function calculateCorrectAnswer(){
     let operand1 = parseInt(document.getElementById('operand1').innerText);
     let operand2 = parseInt(document.getElementById('operand2').innerText);
@@ -17,7 +28,6 @@ export function calculateCorrectAnswer(){
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplemented operator ${operator}. Aborting!`;
     }
-
 }
 
  /**
@@ -132,7 +142,7 @@ export function generateNum2 (gameType, level){
 }
 
 export function adjustLevel() {
-    gameLevel = parseInt(document.getElementById('level').innerText);
+    let gameLevel = parseInt(document.getElementById('level').innerText);
     let lastFiveElements = answerArray.slice(-5);
     let allSameLevel = lastFiveElements.every(answer => answer.level === gameLevel);
     let passes = answerArray.filter(answer => answer.passes === true).length;

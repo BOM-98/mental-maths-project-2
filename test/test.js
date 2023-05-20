@@ -326,7 +326,3 @@ describe('generateNum1 function', function() {
   });
 });
 });
-
-
-
-
