@@ -1,23 +1,56 @@
 import { digitParameters, gameLevelSettings, timer , answerObject } from "./data-structures.js";
 import { calculateCorrectAnswer, gameDecider, numeratorGenerator, incrementQuestion, displayAdditionQuestion, displayDivisionQuestion, displayMultiplyQuestion, displaySubtractQuestion, updatePercentage, generateNum1, generateNum2, adjustLevel } from "./math-functions.js";
 
-//Wait for the DOM to finish loading before running the game
-//Get the button elements and add event listeners to them
 
+//answer array is used to store objects with the data on each answer (isCorrect, userAnswer, correctAnswer, question, time, level)
 export let answerArray = [];
+
+//answer instance is the object that is created for each answer and pushed to the answer array
 export let answerInstance;
+
+//container is used to store the container div for the calculator
 let container;
-let calculatorAdded = false; 
+
+//calculatorAdded is used to ensure that the calculator is only added once and not multiple times if the screen size is changed
+let calculatorAdded = false;
+
+//gets the gameLevel from the DOM 
 let gameLevel = parseInt(document.getElementById("level").innerText);
 
+// Get the modal
+let modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// Get the button that starts the game (inside the modal)
+let startButton = document.getElementById("start");
+
+//Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function () {
 
     modal.style.display = "block";
 
   });
 
+// when the window size changes, the calculator is added or removed as necessary
+window.addEventListener("resize", manageCalculator);
+
+// when the window size changes, the question text is adjusted as necessary
+window.addEventListener("resize", questionTextManager);
+
+  /**
+ * Begin the game, setting up event listeners and initializing game variables.
+ * 
+ *  The function hides the modal dialog.
+ *  Sets up 'keydown' event listener on the answer input field to allow checking the answer when the Enter key is pressed.
+ *  Sets up 'click' event listener on the submit button to allow checking the answer when the button is clicked.
+ *  Starts the game timer.
+ *  Calls the runGame function with the result of the gameDecider function to start the game with a selected operation (addition, subtraction, multiplication, or division).
+ */
 function beginGame() {
     modal.style.display = "none";
+    //Get the button elements and add event listeners to them
     document
       .getElementById("answer")
       .addEventListener("keydown", function (event) {
@@ -30,6 +63,8 @@ function beginGame() {
         checkAnswer();
       });
 
+
+      //begin the timer
       timer.start();
   
       //Run the game with the input from the gameDecider function determining whether the sum will be addition, subtraction, multiplication or division
@@ -128,14 +163,7 @@ function beginGame() {
 
     /*The Modal*/
 
-    // Get the modal
-let modal = document.getElementById("myModal");
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-let startButton = document.getElementById("start");
-
+// When the user clicks the start came button in the modal, it closes the modal and begins the game
 startButton.onclick = function() {
     beginGame();
     manageCalculator();
@@ -157,6 +185,12 @@ window.onclick = function(event) {
   }
 }
 
+/**
+ * Manages the display of question text within the stats container based on the current window width.
+ *
+ * This function dynamically updates the display text of the element with id "question-stat" based on the window's inner width.
+ * If the window width is less than 400px, the function sets the display text to "Q". Otherwise, it sets the display text to "Question".
+ */
 const questionTextManager = function() {
   if (window.innerWidth < 400) {
     this.document.getElementById("question-stat").innerHTML = "Q";
@@ -165,6 +199,16 @@ const questionTextManager = function() {
   }
 };
 
+/**
+ * Manages the display of the calculator based on the current window width.
+ *
+ * This function dynamically appends a calculator to the DOM or removes it based on the window's inner width.
+ * If the window width is less than 400px and the calculator is not yet added, the function creates and appends a calculator.
+ * If the window width is equal or larger than 400px and the calculator exists, it removes the calculator from the DOM.
+ *
+ * The calculator consists of a display input element and a set of buttons, each assigned a unique value. 
+ * Clicking a button will trigger a calculation function that updates the display's value based on the clicked button's value.
+ */
   const manageCalculator = function() {
     // Get the calculator div
     const calculatorDiv = document.getElementById('calculator');
@@ -230,8 +274,7 @@ const questionTextManager = function() {
     }
   };
   
-  window.addEventListener("resize", manageCalculator);
-  window.addEventListener("resize", questionTextManager);
+
   
 
 
