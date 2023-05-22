@@ -67,24 +67,42 @@ export function calculateCorrectAnswer(){
     return numerator;
 };
 
+/**
+ * incrementQuestion increments the current question number by one.
+ */
 export function incrementQuestion (){
     let questionNumber = parseInt(document.getElementById('question').innerText);
     questionNumber++;
     document.getElementById('question').innerText = questionNumber;
 }
 
+/**
+ * displayAdditionQuestion displays an addition question with the given operands.
+ * @param {number} operand1 - The first operand in the question.
+ * @param {number} operand2 - The second operand in the question.
+ */
 export function displayAdditionQuestion(operand1, operand2){
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "+";
 }
 
+/**
+ * displaySubtractQuestion displays a subtraction question with the given operands.
+ * @param {number} operand1 - The first operand in the question.
+ * @param {number} operand2 - The second operand in the question.
+ */
 export function displaySubtractQuestion(operand1, operand2){
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "-";
 }
 
+/**
+ * displayMultiplyQuestion displays a multiplication question with the given operands.
+ * @param {number} operand1 - The first operand in the question.
+ * @param {number} operand2 - The second operand in the question.
+ */
 export function displayMultiplyQuestion(operand1, operand2){
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
@@ -92,12 +110,30 @@ export function displayMultiplyQuestion(operand1, operand2){
 
 }
 
+/**
+ * displayDivisionQuestion displays a division question with the given operands.
+ * @param {number} operand1 - The first operand in the question.
+ * @param {number} operand2 - The second operand in the question.
+ */
 export function displayDivisionQuestion(operand1, operand2){
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "/";
 }
 
+/**
+ * updatePercentage updates the percentage of correct answers and updates the DOM based on the percentage.
+ * It calculates the percentage of correct answers, updates the 'percentage' element on the page, 
+ * and changes the background color of the 'green-container' element depending on the percentage.
+ * 
+ * It iterates through the answerArray and evaluates the 'passes' key in each object to determine whether 
+ * the answer was correct.
+ * 
+ * Background color rules:
+ * - If the percentage of correct answers is greater than 85%, the color is set to --global-color-secondary-green.
+ * - If the percentage of correct answers is between 60% and 85%, the color is set to --global-color-warning-amber.
+ * - If the percentage of correct answers is less than or equal to 60%, the color is set to --global-color-warning-red.
+ */
 export function updatePercentage (){
     let percentPasses = Math.round((answerArray.filter(answer => answer.passes === true).length / answerArray.length) * 100);
     if (isNaN(percentPasses)){
@@ -115,7 +151,46 @@ export function updatePercentage (){
     }
 }
 
-
+/**
+ * generateNum1 generates a random number within a range based on the provided game type and level. 
+ * The game type determines which range of values to use from the gameLevelSettings array.
+ * The level determines which set of ranges containing maxiumum and minimum numbers to use within the selected game type.
+ * The generated number is used as the first operand (num1) in the game's arithmetic operation.
+ * 
+ * @param {string} gameType - The type of game, can be one of the following: "addition", "subtract", "multiply", "division".
+ * @param {string} level - The difficulty level of the game.
+ * 
+ * @returns {number} returnNum1 - A random number within the defined range for the specified game type and level.
+ * 
+ * Example of gameLevelSettings structure:
+ * gameLevelSettings = [
+ *   '1'[
+ *     digitParameters.addition[1], // addition
+ *     digitParameters.subtract[1], // subtraction
+ *     digitParameters.multiply[1], // multiplication
+ *     digitParameters.division[1]  // division
+ *   ],
+ *   '2': [
+ *     digitParameters.addition[2], // addition
+ *     // ...
+ *   ],
+ *   // ...
+ * ];
+ * 
+ * Example of digitParameters structure:
+ * digitParameters = {
+ *  addition: {
+ *   1: {
+ *    num1: { min: 1, max: 100 },
+ *    num2: { min: 1, max: 10 }
+ *   },
+ *   2: {
+ *   num1: { min: 1, max: 100 },
+ *   num2: { min: 1, max: 100 }
+ *   },
+ *  //...
+ * }
+ */
 export function generateNum1 (gameType, level){
     let index;
     if (gameType === "addition"){
@@ -132,6 +207,46 @@ export function generateNum1 (gameType, level){
     return returnNum1;
 }
 
+/**
+ * generateNum1 generates a random number within a range based on the provided game type and level. 
+ * The game type determines which range of values to use from the gameLevelSettings array.
+ * The level determines which set of ranges containing maxiumum and minimum numbers to use within the selected game type.
+ * The generated number is used as the first operand (num1) in the game's arithmetic operation.
+ * 
+ * @param {string} gameType - The type of game, can be one of the following: "addition", "subtract", "multiply", "division".
+ * @param {string} level - The difficulty level of the game.
+ * 
+ * @returns {number} returnNum1 - A random number within the defined range for the specified game type and level.
+ * 
+ * Example of gameLevelSettings structure:
+ * gameLevelSettings = [
+ *   '1'[
+ *     digitParameters.addition[1], // addition
+ *     digitParameters.subtract[1], // subtraction
+ *     digitParameters.multiply[1], // multiplication
+ *     digitParameters.division[1]  // division
+ *   ],
+ *   '2': [
+ *     digitParameters.addition[2], // addition
+ *     // ...
+ *   ],
+ *   // ...
+ * ];
+ * 
+ * Example of digitParameters structure:
+ * digitParameters = {
+ *  addition: {
+ *   1: {
+ *    num1: { min: 1, max: 100 },
+ *    num2: { min: 1, max: 10 }
+ *   },
+ *   2: {
+ *   num1: { min: 1, max: 100 },
+ *   num2: { min: 1, max: 100 }
+ *   },
+ *  //...
+ * }
+ */
 export function generateNum2 (gameType, level){
     let index;
     if (gameType === "addition"){
@@ -147,6 +262,17 @@ export function generateNum2 (gameType, level){
     return num2;
 }
 
+/**
+ * adjustLevel adjusts the level of the game based on the player's performance. 
+ * If the player has answered correctly 85% of the time or more and all of the last five answers were on the same level,
+ * the level increases by one. If these conditions are not met, the level remains the same.
+ * 
+ * @returns {number} - The game's current level. If the player has answered fewer than 5 questions since the beginning of the game, it returns 0.
+ * 
+ * Note: The function uses a global variable 'answerArray', which is an array of objects where 
+ * each object has properties 'level' (indicating the level of that question) and 'passes' (a boolean indicating 
+ * whether the player answered correctly).
+ */
 export function adjustLevel() {
     let gameLevel = parseInt(document.getElementById('level').innerText);
     let lastFiveElements = answerArray.slice(-5);
