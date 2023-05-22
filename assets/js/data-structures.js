@@ -1,3 +1,5 @@
+import { checkAnswer } from "./index.js";
+
 export let digitParameters = {
   addition: {
     1: {
@@ -217,6 +219,13 @@ export let timer =  {
                 document.getElementsByClassName('time')[0].style.backgroundColor = "var(--global-color-warning-amber)";
             } else {
                 document.getElementsByClassName('time')[0].style.backgroundColor = "var(--global-color-warning-red)";
+            }
+
+            if (timer.time === 0){
+              const display = document.getElementById('answer');
+              display.value = 0;
+              alert("Time is up!");
+              checkAnswer();
             }
     } , 1000)},
 

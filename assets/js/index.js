@@ -6,6 +6,8 @@ import { calculateCorrectAnswer, gameDecider, numeratorGenerator, incrementQuest
 
 export let answerArray = [];
 export let answerInstance;
+let container;
+let calculatorAdded = false; 
 let gameLevel = parseInt(document.getElementById("level").innerText);
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -36,13 +38,13 @@ function beginGame() {
   
   
   /**
-   * The `runGame` function starts a new round of the game with the given gameType.
-   * It first clears the previous answer and sets focus on the answer field.
-   * Then, it generates two random numbers and calls the appropriate function
+   * With the specified gameType, a new round of the game is initiated by the 'runGame' function. 
+   * It initially deletes the preceding response and centers attention on the answer area. 
+   * The game's kind of arithmetic operation (addition, subtraction, multiplying, or dividing) is specified by the string parameter gameType. 
    * to display the question based on the gameType.
    *
    * @param {string} gameType - The type of arithmetic operation for the game (addition, subtract, multiply, division).
-   * @throws {string} Will throw an error if the provided gameType is not recognized.
+   * @throws {string} If the specified gameType is not recognized, an error will be thrown.
    */
   function runGame(gameType){
   
@@ -85,7 +87,7 @@ function beginGame() {
    * Depending on whether the answer is correct, it shows an appropriate alert message.
    * Finally, it starts a new round of the game with a randomly decided game type.
    */
-  function checkAnswer(){
+  export function checkAnswer(){
   
       // Get the user's answer from input field and parse it as an integer
       let userAnswer = parseInt(document.getElementById('answer').value);
@@ -114,7 +116,7 @@ function beginGame() {
       } else {
           alert(`${userAnswer} is incorrect. The correct answer was ${calculatedAnswer}!`);
           incrementQuestion();
-            updatePercentage();
+          updatePercentage();
       };
 
       adjustLevel();
@@ -136,12 +138,14 @@ let startButton = document.getElementById("start");
 
 startButton.onclick = function() {
     beginGame();
+    manageCalculator();
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
   beginGame();
+  manageCalculator();
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -149,5 +153,87 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     beginGame();
+    manageCalculator();
   }
 }
+
+const questionTextManager = function() {
+  if (window.innerWidth < 400) {
+    this.document.getElementById("question-stat").innerHTML = "Q";
+  } else {
+    this.document.getElementById("question-stat").innerHTML = "Question";
+  }
+};
+
+  const manageCalculator = function() {
+    // Get the calculator div
+    const calculatorDiv = document.getElementById('calculator');
+  
+    // Check if screen size is less than 400px
+    if (window.innerWidth < 400) {
+      // Check if calculator is not added yet
+      if (!calculatorAdded) {
+        // create main calculator container
+        const container = document.createElement('div');
+        container.className = 'container';
+        container.id = 'calculator-container';
+  
+        // create and append display input
+        const display = document.getElementById('answer');
+  
+        // create and append buttons container
+        const buttons = document.createElement('div');
+        buttons.className = 'buttons';
+        container.appendChild(buttons);
+  
+        // define button values
+        const buttonValues = ['AC', 'DEL', '7', '8', '9', '4', '5', '6', '1', '2', '3', '0'];
+  
+        // define function to calculate based on button clicked
+        let output = "";
+        const calculate = (btnValue) => {
+          display.focus();
+          if (btnValue === 'AC') {
+              output = '';
+          } else if (btnValue === 'DEL') {
+              output = output.slice(0, -1);
+          } else {
+              output += btnValue;
+          }
+          display.value = output;
+        };
+  
+        // create, configure and append buttons
+        buttonValues.forEach(value => {
+          const button = document.createElement('button');
+          button.className = 'calc-button';
+          button.dataset.value = value;
+          button.innerText = value;
+          button.addEventListener('click', () => calculate(value));
+          buttons.appendChild(button);
+        });
+  
+        // append the calculator to the calculator div
+        calculatorDiv.appendChild(container);
+  
+        // set calculatorAdded to true
+        calculatorAdded = true;
+      }
+    } else {
+      // if calculator exists, remove it
+      let container = document.getElementById('calculator-container');
+      if (container) {
+        calculatorDiv.removeChild(container);
+      }
+      // set calculatorAdded to false
+      calculatorAdded = false;
+    }
+  };
+  
+  window.addEventListener("resize", manageCalculator);
+  window.addEventListener("resize", questionTextManager);
+  
+
+
+
+

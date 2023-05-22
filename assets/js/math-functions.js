@@ -54,7 +54,13 @@ export function calculateCorrectAnswer(){
     }
   };
 
-
+/**
+ * Generates a numerator for a fraction operation.
+ * The numerator is calculated as a product of num2 and a random integer between 2 and 26 (inclusive).
+ *
+ * @param {Number} num2 - The denominator of the fraction.
+ * @returns {Number} - The generated numerator.
+ */
  export function numeratorGenerator(num2){
     let multiplier = Math.floor(Math.random() * 25) + 2;
     let numerator = num2 * multiplier;
