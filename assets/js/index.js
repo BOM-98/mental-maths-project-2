@@ -28,16 +28,14 @@ let startButton = document.getElementById("start");
 
 //Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function () {
-
     modal.style.display = "block";
-
   });
 
 // when the window size changes, the calculator is added or removed as necessary
-window.addEventListener("resize", manageCalculator);
+//window.addEventListener("resize", manageCalculator);
 
 // when the window size changes, the question text is adjusted as necessary
-window.addEventListener("resize", questionTextManager);
+//window.addEventListener("resize", questionTextManager);
 
   /**
  * Begin the game, setting up event listeners and initializing game variables.
@@ -70,7 +68,6 @@ function beginGame() {
       //Run the game with the input from the gameDecider function determining whether the sum will be addition, subtraction, multiplication or division
     runGame(gameDecider());
 }
-  
   
   /**
    * With the specified gameType, a new round of the game is initiated by the 'runGame' function. 
@@ -273,10 +270,3 @@ const questionTextManager = function() {
       calculatorAdded = false;
     }
   };
-  
-
-  
-
-
-
-

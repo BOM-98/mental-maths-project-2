@@ -216,7 +216,7 @@ export function generateNum1 (gameType, level){
  * @param {string} gameType - The type of game, can be one of the following: "addition", "subtract", "multiply", "division".
  * @param {string} level - The difficulty level of the game.
  * 
- * @returns {number} returnNum1 - A random number within the defined range for the specified game type and level.
+ * @returns {number} Num2 - A random number within the defined range for the specified game type and level.
  * 
  * Example of gameLevelSettings structure:
  * gameLevelSettings = [

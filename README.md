@@ -156,27 +156,18 @@ I created my wireframe using Figma.
 
 #### Desktop Page
 
-The home page was designed .
+The home page was designed to show only pertinent information on the screen. Statistical indicators including time, level and quesiton number are displayed across the top. On the very right of the statistics container a box displays the current percentage of questions the user is getting correct and on time. the user will need to keep this score above 85% to progress to further levels. 
+
+The center of the page features the sum to be answered and the input box that the user can use to answer the question. 
 
 ![Wireframe1](https://github.com/BOM-98/project_1/blob/main/assets/images/desktop-wireframe.png)
 
 #### Phone Page
 
-The blog page outlined the basic structure that would be used by the 'Ideation', 'Customer Discovery', and 'Fundraising' articles. It featured a header image with the page content section directly below and a sticky side panel for navigating to different article headings. The side panel will disappear once the user scrolls to the contact section. The blog page is finished off with a contact section.  
+The mobile version condenses the statistics together and displays them as a column to improve the aesthetics of the layout.  
 
 ![Wireframe2](https://github.com/BOM-98/project_1/blob/main/assets/images/phone-wireframe.png)
 
-#### Contact Page
-
-The contact page is purely intended to get users to register for the website. An about page was going to be implemented underneath, highlighted in green, however, this was not implemented as there isn't a set location for the website. 
-
-![Wireframe3](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/contact-page.png)
-
-#### Thank You Page
-
-The thank you page is arrived at as soon as a user submits a form on the website. It features a main image followed by a 'back to home' button to ease navigation back to the home page. 
-
-![Wireframe4](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/thank-you-page.png)
 
 ### User Stories
 
