@@ -108,20 +108,20 @@ All design decisions incorporated into the web app were made keeping these targe
 
 ### Colour Scheme
 
-1. Primary Color: Navy Blue (#1c3d5a)
-   - Represents trust, professionalism, and intelligence. Perfect for conveying the educational and cognitive improvement aspects of the website.
-
-2. Secondary Color: Sky Blue (#71a6d2)
-   - A lighter, more approachable shade of blue that complements the primary color. It can be used for buttons, links, and other interactive elements to create a sense of engagement and accessibility.
-
-3. Accent Color: Coral (#ff6b6b)
-   - A warm, energetic color that contrasts with the blue tones. It can be used to highlight important information, call-to-action buttons, or progress indicators.
-
-4. Background Color: Off-White (#f5f5f5)
+1. Primary Color: Anti-flash white (#F3F4F5)
    - This off-white color maintains a clean, neutral backdrop for content while reducing eye strain caused by the high contrast of pure white. It also maintains sufficient contrast with the text color (Dark Gray) to ensure readability and accessibility.
 
-5. Text Color: Dark Gray (#333333)
+2. Secondary Color / Text Color: Eerie black (#1E1E1E)
    - A softer alternative to black that maintains high contrast with the white background for easy readability.
+
+3. Accent Color: Argentinian Blue (#67AEF4)
+   - A lighter, more approachable shade of blue that complements the primary color. It can be used for buttons, links, and other interactive elements to create a sense of engagement and accessibility. Represents trust, professionalism, and intelligence. Perfect for conveying the educational and cognitive improvement aspects of the website.
+   
+4. Highlight Color: Lime Green (#09CE28)
+   - A sharp green colour to draw attention to the most important statistics the user will need to keep in mind. This colour can be adjusted in opacity to create a softer feel on the eyes, while maintining its contrast with other elements. This colour will be used sparingly to maintain its importance. 
+
+5. Warning Color: Red (#FF0000)
+   - A sharp color to draw attention to timers that are about to run out or scores that have fallen low. This red will only be displayed dynamically as indicators on the screen show the user is running out of time or performing poorly.
 
 Accessibility and contrast considerations:
 
@@ -131,7 +131,7 @@ In this color palette, the primary color (Navy Blue) and secondary color (Sky Bl
 
 Overall, this color palette provides a professional, engaging, and accessible experience for users, ensuring that the site's design aligns with its purpose and target personas.
 
-![Colour Palette](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/colour-pallette-image.png) - TO CHANGE THIS IMAGE
+![Colour Palette](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/P2-colour-pallette-image.png)
 
 ### Typography
 
@@ -152,19 +152,19 @@ Overall, this color palette provides a professional, engaging, and accessible ex
 - Reason: Lato is a warm, humanist sans-serif font that adds a touch of elegance and sophistication to accent text. It pairs well with the other font families and helps emphasize important information without detracting from the overall visual harmony of the site.
 
 ### Wire Frames
-I created my wireframe using Balsamiq.
+I created my wireframe using Figma.
 
-#### Home Page
+#### Desktop Page
 
-The home page and Hero section were designed to provide a brief description of the Startup Academy with a call to action to sign up for the newsletter. In the implementation, a secondary CTA button was added linking to the articles.
+The home page was designed .
 
-![Wireframe1](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/home-page.png)
+![Wireframe1](https://github.com/BOM-98/project_1/blob/main/assets/images/desktop-wireframe.png)
 
-#### Blog Page
+#### Phone Page
 
 The blog page outlined the basic structure that would be used by the 'Ideation', 'Customer Discovery', and 'Fundraising' articles. It featured a header image with the page content section directly below and a sticky side panel for navigating to different article headings. The side panel will disappear once the user scrolls to the contact section. The blog page is finished off with a contact section.  
 
-![Wireframe2](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/blog-pages.png)
+![Wireframe2](https://github.com/BOM-98/project_1/blob/main/assets/images/phone-wireframe.png)
 
 #### Contact Page
 
