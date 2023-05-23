@@ -1,6 +1,4 @@
 import {
-  digitParameters,
-  gameLevelSettings,
   timer,
   answerObject,
 } from "./data-structures.js";
@@ -30,9 +28,6 @@ let container;
 
 //calculatorAdded is used to ensure that the calculator is only added once and not multiple times if the screen size is changed
 let calculatorAdded = false;
-
-//gets the gameLevel from the DOM
-let gameLevel = parseInt(document.getElementById("level").innerText);
 
 // Get the modal
 let modal = document.getElementById("myModal");
@@ -92,6 +87,8 @@ function runGame(gameType) {
   // Clear the answer field and set focus on it
   document.getElementById("answer").value = "";
   document.getElementById("answer").focus();
+
+  let gameLevel = parseInt(document.getElementById("level").innerText);
 
   // Creates two random numbers between 1 and 25
   let num1 = generateNum1(gameType, gameLevel);
@@ -159,16 +156,16 @@ export function checkAnswer() {
   if (isCorrect) {
     alert("Correct Answer - Well Done!");
     incrementQuestion();
-    updatePercentage();
+    updatePercentage(answerArray);
   } else {
     alert(
       `${userAnswer} is incorrect. The correct answer was ${calculatedAnswer}!`
     );
     incrementQuestion();
-    updatePercentage();
+    updatePercentage(answerArray);
   }
 
-  adjustLevel();
+  adjustLevel(answerArray);
 
   // Start a new round of the game with a randomly decided game type
   runGame(gameDecider());

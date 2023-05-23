@@ -1,41 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Neuton:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Neuton:400,700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --global-font-family: Montserrat, Neuton;
-    --global-text-color-black: #1E1E1E;
-    --global-primary-title-size: 2rem;
-    --global-color-primary-blue: #67AEF4;
-    --global-color-secondary-green: rgb(9, 206, 40, 0.7);
-    --global-color-background-grey: #F3F4F5;
-    --global-color-highlight-white: #FFFFFF;
-    --global-color-warning-amber: rgba(237, 91, 1, 0.7);
-    --global-color-warning-red: rgba(255, 0, 0, 0.7);
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: var(--global-font-family);
-    height: 100vh;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--global-text-color-black);
-    background-color: var(--global-color-background-grey);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
+:root {
+  --global-font-family: Montserrat, Neuton;
+  --global-text-color-black: #1e1e1e;
+  --global-primary-title-size: 2rem;
+  --global-color-primary-blue: #67aef4;
+  --global-color-secondary-green: rgb(9, 206, 40, 0.7);
+  --global-color-background-grey: #f3f4f5;
+  --global-color-highlight-white: #ffffff;
+  --global-color-warning-amber: rgba(237, 91, 1, 0.7);
+  --global-color-warning-red: rgba(255, 0, 0, 0.7);
+}
 
-    /* The Modal (background) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--global-font-family);
+  height: 100vh;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--global-text-color-black);
+  background-color: var(--global-color-background-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -46,7 +46,7 @@
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: var(--global-text-color-black); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -104,178 +104,184 @@
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 /* Add Animation */
 @keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
-  .header {
-    margin: 25px 0;
-    padding: 1rem 0;
+.header {
+  margin: 25px 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  max-width: 1000px;
+  min-width: fit-content;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 36px 16px;
+  width: 100%;
+}
+
+.time,
+.level,
+.question {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  width: fit-content;
+  max-width: 25vw;
+  max-height: fit-content;
+  background-color: var(--global-color-background-grey);
+}
+
+#time {
+  color: var(--global-color-highlight-white);
+  font-weight: 900;
+}
+
+#time-heading {
+  color: var(--global-color-highlight-white);
+}
+
+.stat {
+  padding: 0 2rem;
+}
+
+.white-container {
+  background-color: var(--global-color-highlight-white);
+  border-radius: 16px;
+  padding: 16px 48px;
+  width: 95%;
+  max-width: 1000px;
+  margin: 16px;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
+}
+
+.green-container {
+  background-color: var(--global-color-secondary-green);
+  border-radius: 16px;
+  width: fit-content;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
+}
+
+.green-container p {
+  color: var(--global-color-background-grey);
+}
+
+#percentage {
+  padding: 28px 32px;
+}
+
+.neomorphic {
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
+  border-radius: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sum {
+  background-color: var(--global-color-primary-blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 32px 0px;
+  margin: 2rem 0;
+}
+
+.sum span {
+  color: var(--global-color-background-grey);
+  font-size: 1.5rem;
+  padding: 0 0.25rem;
+}
+
+.answer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--global-color-background-grey);
+}
+
+.answer-and-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.answer input {
+  width: 100%;
+  min-height: 15vh;
+  padding: 0.5rem;
+  border: 1px solid var(--global-color-primary-blue);
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#submit {
+  background-color: var(--global-color-primary-blue);
+  border: none;
+  min-height: 5vh;
+  color: var(--global-color-highlight-white);
+  font-family: var(--global-font-family);
+  font-size: 1rem;
+  width: 50%;
+  align-self: center;
+  margin: 2rem 0;
+}
+
+/* Styling for screens smaller than 1000px wide. 
+  This media query adjusts the layout of various elements to better fit smaller screens. */
+@media all and (max-width: 1000px) {
+  /* Arrange the elements in a column, center them and add some padding.*/
+  .stats {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 95%;
-    max-width: 1000px;
-    min-width: fit-content;
-  }
-
-
-  .stats{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
     padding: 36px 16px;
-    width: 100%;
-  }
-
-  .time, 
-  .level, 
-  .question {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 2rem;
-    width: fit-content;
-    max-width: 25vw;
-    max-height: fit-content;
-    background-color: var(--global-color-background-grey);
-  }
-
-  #time{
-    color: var(--global-color-highlight-white);
-    font-weight: 900;
-  }
-
-  #time-heading{
-    color: var(--global-color-highlight-white);
-  }
-
-  .stat {
-    padding: 0 2rem;
-  }
-
-  .white-container{
-    background-color: var(--global-color-highlight-white);
-    border-radius: 16px;
-    padding: 16px 48px;
     width: 95%;
-    max-width: 1000px;
-    margin: 16px;
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
   }
 
-  .green-container{
-    background-color: var(--global-color-secondary-green);
-    border-radius: 16px;
-    width: fit-content;
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
-  }
-
-  .green-container p{
-    color: var(--global-color-background-grey);
-  }
-
-  #percentage {
-    padding: 28px 32px;
-  }
-
-  .neomorphic {
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.25);
-    border-radius: 16px;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-   
-
-  .sum {
-    background-color: var(--global-color-primary-blue);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 32px 0px;
-    margin: 2rem 0;
-  }
-
-  .sum span {
-    color: var(--global-color-background-grey);
-    font-size: 1.5rem;
-    padding: 0 0.25rem;
-  }
-
-  .answer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    padding: 1rem 0;
-    background-color: var(--global-color-background-grey);
-  }
-
-  .answer-and-input {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    width: 100%;
-    margin: 2rem 0;
-  }
-
-  .answer input {
-    width: 100%;
-    min-height: 15vh;
-    padding: 0.5rem;
-    border: 1px solid var(--global-color-primary-blue);
-    border-radius: 8px;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  #submit {
-    background-color: var(--global-color-primary-blue);
-    border: none;
-    min-height: 5vh;
-    color: var(--global-color-highlight-white);
-    font-family: var(--global-font-family);
-    font-size: 1rem;
-    width: 50%;
-    align-self: center;
-    margin: 2rem 0;
-  }
-  
-
-  @media all and (max-width: 1000px) {
-
-    .stats{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 36px 16px;
-      width: 95%;
-    }
-
-  .time, 
-  .level, 
+  /* Elements are arranged in rows, centered, and have padding added.*/
+  .time,
+  .level,
   .question {
     display: flex;
     flex-direction: row;
@@ -290,7 +296,8 @@
     background-color: var(--global-color-background-grey);
   }
 
-  .green-container{
+  /* Center the content and apply some visual style.*/
+  .green-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,119 +308,129 @@
     max-height: fit-content;
   }
 
-  .white-container{
+  /*add padding and margin to white-container*/
+  .white-container {
     padding: 4px 16px;
     margin: 0px 16px;
   }
 
-  .header{
+  /* Add margin to header to create more space*/
+  .header {
     margin: 4px 16px;
   }
 
+  /* Decrease font size of the main heading*/
   .header h1 {
     font-size: 1.5rem;
   }
 
+  /* remove margin to the sum container and center*/
   .sum {
     margin: 0;
     width: 100%;
     align-items: center;
   }
 
+  /* Adjust width of .form to make consistent with other elements*/
   .form {
     width: 95%;
   }
 
-  .answer-and-input{
+  /* Adjust margin of answer-and-input to make consistent with other elements*/
+  .answer-and-input {
     margin: 0;
     justify-content: center;
   }
 
+  /* Adjust to fix consistency with other elements*/
   #answer {
     min-height: 10vh;
     width: 100%;
   }
+}
 
+/*Further styling adjustments for screens smaller than 400px wide.
+  Here we make more dramatic layout changes to accommodate very small screens.*/
+@media all and (max-width: 400px) {
+  /* We set the body to a maximum width of 95% of the viewport width and align content to the start of the flex container.*/
+  body {
+    max-width: 95vw;
+    justify-content: flex-start;
   }
 
-  @media all and (max-width: 400px) {
-   body{
-      max-width: 95vw;
-      justify-content: flex-start;
-   }
-
-   .white-container{
+  /* The white-container class has its margin adjusted.*/
+  .white-container {
     margin: 10px 0;
-   }
-
-   .header {
-      margin: 0;
-      max-width: 100vw;
-      text-align: center;
-   }
-
-   .header h1 {
-    font-size: 1.5rem;
-   }
-
-   .stats{
-    flex-direction: row;
-   }
-
-   .time,
-    .level,
-    .question,
-    .level {
-      width: 25%;
-      flex-direction: column;
-      margin: 2px 0;
-    }
-
-    .stat{
-      font-size: 1rem;
-    }
-
-    .container {
-      position: relative;
-      max-width: 300px;
-      width: 100%;
-      border-radius: 12px;
-      padding: 10px 20px 20px;
-      background: var(--global-color-highlight-white);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    }
-    .display {
-      height: 10px;
-      width: 100%;
-      outline: none;
-      border: none;
-      text-align: right;
-      margin-bottom: 10px;
-      font-size: 25px;
-      color: #000e1a;
-      pointer-events: none;
-    }
-    .buttons {
-      display: grid;
-      grid-gap: 10px;
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .buttons button {
-      padding: 10px;
-      border-radius: 6px;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-      background-color: var(--global-color-background-grey);
-    }
-    .buttons button:active {
-      transform: scale(0.99);
-    }
-    .operator {
-      color: var(--global-color-primary-blue);
-    }
-
-    .sum {
-      padding: 16px 0;
-    }
   }
+
+  .header {
+    margin: 0;
+    max-width: 100vw;
+    text-align: center;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .stats {
+    flex-direction: row;
+  }
+
+  .time,
+  .level,
+  .question,
+  .level {
+    width: 25%;
+    flex-direction: column;
+    margin: 2px 0;
+  }
+
+  .stat {
+    font-size: 1rem;
+  }
+
+  .container {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px 20px 20px;
+    background: var(--global-color-highlight-white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  }
+  .display {
+    height: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #000e1a;
+    pointer-events: none;
+  }
+  .buttons {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .buttons button {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--global-color-background-grey);
+  }
+  .buttons button:active {
+    transform: scale(0.99);
+  }
+  .operator {
+    color: var(--global-color-primary-blue);
+  }
+
+  .sum {
+    padding: 16px 0;
+  }
+}

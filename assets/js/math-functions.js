@@ -1,5 +1,5 @@
 import {timer, digitParameters, gameLevelSettings} from "./data-structures.js";
-import {answerArray} from "./index.js";
+
 
 /**
  * Calculate the result of the operation.
@@ -134,7 +134,7 @@ export function displayDivisionQuestion(operand1, operand2){
  * - If the percentage of correct answers is between 60% and 85%, the color is set to --global-color-warning-amber.
  * - If the percentage of correct answers is less than or equal to 60%, the color is set to --global-color-warning-red.
  */
-export function updatePercentage (){
+export function updatePercentage (answerArray){
     let percentPasses = Math.round((answerArray.filter(answer => answer.passes === true).length / answerArray.length) * 100);
     if (isNaN(percentPasses)){
         percentPasses = 0;
@@ -273,7 +273,7 @@ export function generateNum2 (gameType, level){
  * each object has properties 'level' (indicating the level of that question) and 'passes' (a boolean indicating 
  * whether the player answered correctly).
  */
-export function adjustLevel() {
+export function adjustLevel(answerArray) {
     let gameLevel = parseInt(document.getElementById('level').innerText);
     let lastFiveElements = answerArray.slice(-5);
     let allSameLevel = lastFiveElements.every(answer => answer.level === gameLevel);
