@@ -266,6 +266,11 @@ form {
   margin: 2rem 0;
 }
 
+footer h2 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
 /* Styling for screens smaller than 1000px wide. 
   This media query adjusts the layout of various elements to better fit smaller screens. */
 @media all and (max-width: 1000px) {
