@@ -172,34 +172,6 @@ export function updatePercentage(answerArray) {
  *
  * @returns {number} returnNum1 - A random number within the defined range for the specified game type and level.
  *
- * Example of gameLevelSettings structure:
- * gameLevelSettings = [
- *   '1'[
- *     digitParameters.addition[1], // addition
- *     digitParameters.subtract[1], // subtraction
- *     digitParameters.multiply[1], // multiplication
- *     digitParameters.division[1]  // division
- *   ],
- *   '2': [
- *     digitParameters.addition[2], // addition
- *     // ...
- *   ],
- *   // ...
- * ];
- *
- * Example of digitParameters structure:
- * digitParameters = {
- *  addition: {
- *   1: {
- *    num1: { min: 1, max: 100 },
- *    num2: { min: 1, max: 10 }
- *   },
- *   2: {
- *   num1: { min: 1, max: 100 },
- *   num2: { min: 1, max: 100 }
- *   },
- *  //...
- * }
  */
 export function generateNum1(gameType, level) {
   let index;
@@ -224,7 +196,7 @@ export function generateNum1(gameType, level) {
 }
 
 /**
- * generateNum1 generates a random number within a range based on the provided game type and level.
+ * generateNum2 generates a random number within a range based on the provided game type and level.
  * The game type determines which range of values to use from the gameLevelSettings array.
  * The level determines which set of ranges containing maxiumum and minimum numbers to use within the selected game type.
  * The generated number is used as the first operand (num1) in the game's arithmetic operation.
@@ -260,7 +232,7 @@ export function generateNum2(gameType, level) {
  * If the player has answered correctly 85% of the time or more and all of the last five answers were on the same level,
  * the level increases by one. If these conditions are not met, the level remains the same.
  *
- * @returns {number} - The game's current level. If the player has answered fewer than 5 questions since the beginning of the game, it returns 0.
+ * @returns {number} - The game's current level. If the player has answered fewer than 4 questions since the beginning of the game, it returns 0.
  *
  * Note: The function uses a global variable 'answerArray', which is an array of objects where
  * each object has properties 'level' (indicating the level of that question) and 'passes' (a boolean indicating
