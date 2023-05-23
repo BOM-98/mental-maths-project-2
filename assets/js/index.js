@@ -1,7 +1,4 @@
-import {
-  timer,
-  answerObject,
-} from "./data-structures.js";
+import { timer, answerObject } from "./data-structures.js";
 import {
   calculateCorrectAnswer,
   gameDecider,
