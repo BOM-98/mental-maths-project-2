@@ -35,15 +35,17 @@
 
 ## Introduction
 
-Welcome to Mental Maths Trainer, a web application designed to help people sharpen their mental arithmetic skills in an engaging and adaptive manner. Our platform caters to learners of all ages, from young students to adults seeking to improve their mental agility and mathematical prowess.
+Welcome to Mental Maths Trainer, a fun and flexible online tool that may be used to assist individuals improve their mental arithmetic abilities. Young pupils and adults looking to advance their mental agility and mathematical skill are both welcome on the platform.
 
-Mental Maths Trainer offers a dynamic environment for practicing addition, subtraction, multiplication, and division, with problems that automatically adjust in difficulty to keep users challenged and engaged. By adhering to the [85% rule for optimal learning](https://www.nature.com/articles/s41467-019-12552-4), our application ensures that users experience the right balance of success and challenge, maximizing their learning potential.
+In order to keep users interested and challenged, Mental Maths Trainer provides a dynamic environment for learning addition, subtraction, multiplication, and division with problems that automatically increase in complexity. Our application maximizes learning potential by following the [85% rule for optimum learning](https://www.nature.com/articles/s41467-019-12552-4), to ensures that users experience the right balance of success and challenge, maximizing their learning potential. Users will progress through the app until they reach a level where they are not getting the right answer approx 15% of the time. 
 
-Mental arithmetic training has been shown to have a positive impact on cognitive abilities and neuroplasticity. By engaging in regular mental arithmetic exercises, users can experience a range of benefits beyond just improved math skills. Research suggests that practicing mental arithmetic can lead to enhancements in overall cognitive abilities, such as [working memory, attention, and processing speed](https://psycnet.apa.org/record/2012-26807-001).
+It has been demonstrated that practicing mental arithmetic improves cognitive functioning and neuroplasticity. Users who regularly practice mental arithmetic can get a variety of advantages in addition to better math abilities. Improved working memory, attention, and processing speed have all been shown as a result of practicing mental arithmetic, according to [research](https://psycnet.apa.org/record/2012-26807-001).
 
-Neuroplasticity, the brain's ability to change and adapt in response to new experiences, also plays a significant role in mental arithmetic training. Studies have shown that engaging in cognitive tasks like mental arithmetic can increase neuroplasticity, [leading to stronger connections between neurons and improved brain function](https://www.nature.com/articles/427311a).
+The brain' ability to grow new neurons to adapt to a stimulus, known as neuroplasticity, is a key driver in developing mental arithmetic skills. Studies show that performing cognitive activities like mental addition and subtraction can boost neuroplasticity, [leading to stronger connections between neurons and improved brain function](see https://www.nature.com/articles/427311a).
 
-The Mental Maths Trainer is a web app that will provide numerous benefits, including enhanced cognitive abilities, increased neuroplasticity, and improved performance in everyday tasks. By engaging in regular mental arithmetic practice using Mental Maths Trainer, users can unlock these advantages and experience a positive impact on their overall cognitive development and daily life. Users will work in an enviroment that optimizes their ability to improve their working memory, problem solving abilities, and ability to focus on tasks. 
+The Mental Maths Trainer is an online application that will offer several advantages, including higher performance in daily activities, increased neuroplasticity, and improved cognitive capacities. Users may get these benefits and see a good influence on their general cognitive development and daily lives by regularly practicing mental arithmetic with Mental Maths Trainer. Users will be working in an optimal environment that maximizes the development of their working memory, problem-solving skills, and task-focus.
+
+The game has no end, the goal is to reach level 18 of the game, but if someone reaches level 18 they can continue for as long as they wish. This is to avoid putting restrictions on how long someone would like to train for. 
 
 
 ![Header Image](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/responsive-images.png)
@@ -108,13 +110,13 @@ All design decisions incorporated into the web app were made keeping these targe
 
 ### Colour Scheme
 
-1. Primary Color: Anti-flash white (#F3F4F5)
+1. Background Color: Anti-flash white (#F3F4F5)
    - This off-white color maintains a clean, neutral backdrop for content while reducing eye strain caused by the high contrast of pure white. It also maintains sufficient contrast with the text color (Dark Gray) to ensure readability and accessibility.
 
 2. Secondary Color / Text Color: Eerie black (#1E1E1E)
    - A softer alternative to black that maintains high contrast with the white background for easy readability.
 
-3. Accent Color: Argentinian Blue (#67AEF4)
+3. Primary Color: Argentinian Blue (#67AEF4)
    - A lighter, more approachable shade of blue that complements the primary color. It can be used for buttons, links, and other interactive elements to create a sense of engagement and accessibility. Represents trust, professionalism, and intelligence. Perfect for conveying the educational and cognitive improvement aspects of the website.
    
 4. Highlight Color: Lime Green (#09CE28)
@@ -127,7 +129,7 @@ Accessibility and contrast considerations:
 
 When designing the website, it's crucial to ensure that the color contrast ratios meet the Web Content Accessibility Guidelines (WCAG) standards. This will guarantee that users with visual impairments can easily access and navigate the site.
 
-In this color palette, the primary color (Navy Blue) and secondary color (Sky Blue) provide sufficient contrast against the white background. However, the accent color (Coral) is used sparingly and with caution, as it may not provide enough contrast against the white background for some users.
+In this color palette, the primary color (Argintinian Blue) and secondary color (Eerie black) provide sufficient contrast against the white background. However, the highlight color (Lime Green) is used sparingly and with caution, as it may not provide enough contrast against the white background for some users.
 
 Overall, this color palette provides a professional, engaging, and accessible experience for users, ensuring that the site's design aligns with its purpose and target personas.
 
@@ -137,19 +139,19 @@ Overall, this color palette provides a professional, engaging, and accessible ex
 
 1. Primary Heading (H1):
 - Font Family: Montserrat
-- Reason: Montserrat is a modern, geometric sans-serif font that is both professional and friendly. Its clean lines and rounded edges make it suitable for both target personas, as it conveys a sense of clarity and approachability.
+- Justification: Montserrat is a contemporary, geometric sans-serif typeface that is inviting and professional. It is appropriate for both target personas because to its clear lines and softened edges, which give a feeling of clarity and approachability.
 
 2. Secondary Heading (H2):
 - Font Family: Open Sans
-- Reason: Open Sans is a versatile, humanist sans-serif font with excellent legibility. It complements Montserrat well and works great for subheadings, making it easy for users to differentiate between content levels while maintaining a cohesive visual appearance.
+- Justification: Open Sans is a humanist sans-serif font family that is adaptable and has high readability. It pairs nicely with Montserrat and performs well for subheadings, making it simple for readers to distinguish between content levels while upholding a uniform visual look.
 
 3. Tertiary Heading (H3) and Body Text:
 - Font Family: Roboto
-- Reason: Roboto is a highly legible, neo-grotesque sans-serif font that was designed specifically for digital interfaces. Its readability and friendly appearance make it an excellent choice for body text and tertiary headings, ensuring that content is easily accessible to both target personas.
+- Justification: Roboto is a highly readable, neo-grotesque sans-serif typeface that was created especially for digital interfaces. Its readability and welcoming appeal make it a great option for body text and tertiary headers, ensuring that both target personas can quickly access the material.
 
 4. Accent Text (quotes, callouts, etc.):
 - Font Family: Lato
-- Reason: Lato is a warm, humanist sans-serif font that adds a touch of elegance and sophistication to accent text. It pairs well with the other font families and helps emphasize important information without detracting from the overall visual harmony of the site.
+- Justification: Lato is a warm, humanist sans-serif typeface that gives accent text a dash of class and finesse. It blends in nicely with the other font families and aids in underlining crucial information without interfering with the website's overall aesthetic harmony.
 
 ### Wire Frames
 I created my wireframe using Figma.
@@ -265,57 +267,6 @@ The Startup Academy website features a dedicated homepage where founders can ins
 
 ![Hero Section](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
 
--   #### **Toggle-Enabled Tab Content Section**
-    
-    -   The Tab content section will allow the user to see the topics currently covered on the website, and quickly navigate to the area most relevant to them.
-    - The user can click on the different headings to see what blogs have been written under the topic and can then navigate directly to the individual pages for each article within those categories. 
-    -   This user will see the wealth of knowledge available on the site, and this should encourage the user to consider registering for the newsletter to receive the content in an orderly fashion.
-    - This section will continuously have more content added to it as the blog develops. 
-
-![Toggle-Enabled Tab Content Section](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/tab-section-image.png)
-![Toggle-Enabled Customer Discovery Section](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/customer-discovery-tabcontent.png)
-![Toggle-Enabled Fundraising Section](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/fundraising-tabcontent.png)
-
--  #### **Mailing List Section**
-    
-    -   This section allows the user to register for the mailing list.
-    -   The user is informed of the benefits of joining the mailing list, and the animated 'sign up' button attracts their attention to the call to action.
-    - The input fields are marked with required properties to ensure that all relevant information is gathered.
-
-[![Newsletter](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/newsletter-section-image.png)](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/newsletter-section-image.png)
-
--  #### **The Footer**
-    
-    -   The footer section includes links to the relevant pages for the Startup Academy, in addition to other notable websites relevant to startup founders. The external links will open to a new tab to allow easy navigation for the user.
-
-[![Footer](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/footer-section-image.png)](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/footer-section-image.png)
-
--  #### **Blog Home Page**
-    - Found on the blog-home.html file. 
-    - The blog page will provide the user with a list preview of each blog on the site and links to reach the full article.
-    -   This section is valuable to the user as they will be able to easily identify the types of content they want to read.
-    - Each article is displayed with a corresponding image that alternates on the left or right depending on the order of the article in the list.
-
-![Blog Home Section Top](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/blog-home-top-image.png)
-
--  #### **Article Pages**
-
-	- Each article (Ideation, Customer Discovery, Fundraising) has its own dedicated article page.
-	- Each article features a banner section with an image and title to inform the user of which article they are on.
-	- There is a sticky side navigation with links to the relevant headings in the article to assist the user in arriving at the right sections of the article that they are interested in. The sticky navigation disappears at the end of the article to prevent it from interfering with other sections.
-	- Each article ends with a call to action sign-up form to further encourage users to join the newsletter.
-
-![Article Top](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/customer-discovery-top-image.png)
-![Artile Mid](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/customer-discovery-middle-section-image.png)
-
--  #### **The Sign-up Page**
-    
-    - Found on the contact.html file. 
-    - This page will allow the user to get signed up for The Startup Academy newsletter to start their learning journey. The user will be asked to submit their Email Address, Full Name, Company, and Job Title.
-
-[![Sign Up](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/newsletter-section-image.png)](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/newsletter-section-image.png)
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
 
 ### Features Left to Implement
 
@@ -379,9 +330,9 @@ The live link can be found [here](https://bom-98.github.io/project_1/).
 
 ## Bugs / Issues
 
-There was one notable issue that emerged during development. 
+There were a number of notable issues that arose while creating this website. Two of the most prominent issues that have arised are detailed below.  
 
-While attempting to implement form validation on the forms in each html page, I noticed that once I changed the "type" of an input from text to email, the label for the element would overlay on top of the input if it was not a valid input. This is not the best outcome in terms of user experience, as ideally the user would be able to view their input clearly to help them easily identify errors. To address this issue, I added a CSS property to the label for the input resulting in the label always clearing the input at all times, ultimately resolving the issue.
+While attempting to increment levels in the game, I noticed that 
 
 ![Form Validation Bug](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/email-validation-bug.png).
 
@@ -394,6 +345,7 @@ While attempting to implement form validation on the forms in each html page, I 
 - Unit testing was implemented by following Codecademy's course on [Javascript Testing](https://www.codecademy.com/career-journey/full-stack-engineer/path/fscj-22-front-end-development/track/fscj-22-javascript-testing).
 - Implementing modules using ES6 Syntax was done by following Codecademy's course on [Javascript Modules](https://www.codecademy.com/journeys/full-stack-engineer/paths/fscj-22-front-end-development/tracks/fscj-22-javascript-syntax-part-iii/modules/wdcp-22-learn-javascript-syntax-modules-7ac62a4b-087e-4517-9b13-cc0e94b8495d/articles/implementing-modules-using-es-6-syntax).
 - Code for the calculator on the mobile version of the app was found in [Coding Nepal's Website](https://www.codingnepalweb.com/calculator-html-css-javascript/).
+- The favicon was generated and uploaded following instructions from [favicon.io](https://favicon.io/favicon-converter/)
 
 
 ### Layouts
@@ -401,22 +353,12 @@ While attempting to implement form validation on the forms in each html page, I 
 - How to create a timer object that decrements the time was learned from [stackoverflow](https://stackoverflow.com/questions/8126466/how-do-i-reset-the-setinterval-timer).
 - Explaining how to implement a modal and the source code was found in [w3Schools](https://www.w3schools.com/howto/howto_css_modals.asp). 
 
-### Blog Content
-
-- The actual writing in the blogs was generated by [chat-gpt](https://chat.openai.com/) to produce some content that could be used in the pages.
-
 ### Images
 
 - The responsive website mockups were generated using [Am I Responsive](https://ui.dev/amiresponsive?url=https://bom-98.github.io/project_1/index.html).
-- The logo was generated using [Tailor Brands](https://studio.tailorbrands.com/).
 - Colour scheme was displayed (not generated) using [Coolors](https://coolors.co/).
-- The images used throughout the website were sourced from Freepik, specifically the author [catalyststuff](https://www.freepik.com/author/catalyststuff).
-    - [Hero Image](https://www.freepik.com/free-vector/cute-astronaut-riding-rocket-waving-hand-cartoon-icon-illustration-science-technology-icon-concept_10764053.htm#query=cartoon%20astronaut&position=3&from_view=keyword&track=ais).
-    - [Ideation Image](https://www.freepik.com/free-vector/cute-astronaut-get-idea-with-bulb-cartoon-vector-icon-illustration-science-technology-isolated-flat_37411154.htm#&position=45&from_view=author).
-    - [Customer Discovery Image](https://www.freepik.com/free-vector/astronauts-talking-cartoon-illustration-science-technology-concept-isolated-flat-cartoon-style_16424094.htm#query=cartoon%20astronaut&position=13&from_view=keyword&track=ais).
-    - [Blog Home Banner Image](https://www.freepik.com/free-vector/cute-astronaut-read-book-planet-cartoon-icon-illustration-science-technology-icon-concept-isolated-flat-cartoon-style_10717948.htm#query=cartoon%20astronaut&position=28&from_view=keyword&track=ais).
-    - [Fundraising Image](https://www.freepik.com/free-vector/cute-astronaut-with-money-bag-safe-deposit-box-cartoon-vector-icon-illustration-science-finance_31526058.htm#query=cartoon%20astronaut%20money&position=4&from_view=search&track=ais).
-    - [Thank you image](https://www.freepik.com/free-vector/cute-astronaut-holding-heart-love-cartoon-icon-illustration-science-technology-icon-concept-isolated-flat-cartoon-style_10717944.htm#query=cartoon%20astronaut%20thank%20you&position=7&from_view=search&track=ais).
+- The favicon was sourced from [Flaticon](https://www.flaticon.com/free-icon/calculator_897368?term=maths&page=1&position=3&origin=search&related_id=897368)
+
 
 ### Favicon
 
@@ -424,7 +366,7 @@ While attempting to implement form validation on the forms in each html page, I 
 
 ### Wireframes
 
-- Wireframes were created using [Balsamiq](https://balsamiq.com/). 
+- Wireframes were created using [Figma](https://figma.com/). 
 
 ## Acknowledgements
  
