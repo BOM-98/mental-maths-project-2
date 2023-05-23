@@ -18,13 +18,10 @@ import {
 } from "./math-functions.js";
 
 //answer array is used to store objects with the data on each answer (isCorrect, userAnswer, correctAnswer, question, time, level)
-export let answerArray = [];
+let answerArray = [];
 
 //answer instance is the object that is created for each answer and pushed to the answer array
-export let answerInstance;
-
-//container is used to store the container div for the calculator
-let container;
+let answerInstance;
 
 //calculatorAdded is used to ensure that the calculator is only added once and not multiple times if the screen size is changed
 let calculatorAdded = false;

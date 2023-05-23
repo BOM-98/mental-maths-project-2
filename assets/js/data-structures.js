@@ -213,43 +213,48 @@ export let gameLevelSettings = [
 ];
 
 // timer object which contains data and methods to control the timer displayed in time 'time' element
-export let timer =  {
-    //timer set to 60 seconds at the beginning
-    time: 60,
-    //every second the tiner will decrease by 1
-    secondInterval: 1000,
-    start: function intervalSetter (){setInterval(function(){
-            timer.time--;
-            //display the time in the time element
-            document.getElementById('time').innerHTML = timer.time;
-            //change the background color of the time element depending on the time left
-            if (timer.time > 40){
-                document.getElementsByClassName('time')[0].style.backgroundColor = "var(--global-color-secondary-green )";
-            } else if (timer.time > 10 && timer.time <= 40){
-                document.getElementsByClassName('time')[0].style.backgroundColor = "var(--global-color-warning-amber)";
-            } else {
-                document.getElementsByClassName('time')[0].style.backgroundColor = "var(--global-color-warning-red)";
-            }
-            //if the time is up, submit 0 as an answer and check the answer
-            // 0 is guaranteed to be an incorrect answer so the user will not pass the question
-            if (timer.time === 0){
-              const display = document.getElementById('answer');
-              display.value = 0;
-              alert("Time is up!");
-              checkAnswer();
-            }
-    } , 1000)},
-    //reset the timer to 60 seconds
-    reset: function(){
-        timer.time = 60;
-    }
-}
+export let timer = {
+  //timer set to 60 seconds at the beginning
+  time: 60,
+  //every second the tiner will decrease by 1
+  secondInterval: 1000,
+  start: function intervalSetter() {
+    setInterval(function () {
+      timer.time--;
+      //display the time in the time element
+      document.getElementById("time").innerHTML = timer.time;
+      //change the background color of the time element depending on the time left
+      if (timer.time > 40) {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-secondary-green )";
+      } else if (timer.time > 10 && timer.time <= 40) {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-warning-amber)";
+      } else {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-warning-red)";
+      }
+      //if the time is up, submit 0 as an answer and check the answer
+      // 0 is guaranteed to be an incorrect answer so the user will not pass the question
+      if (timer.time === 0) {
+        const display = document.getElementById("answer");
+        display.value = 0;
+        alert("Time is up!");
+        checkAnswer();
+      }
+    }, 1000);
+  },
+  //reset the timer to 60 seconds
+  reset: function () {
+    timer.time = 60;
+  },
+};
 
 /**
  * Creates and returns an answer object for a game question.
  *
- * This function takes in various parameters related to a game question and answer, 
- * determines whether the question is passed or not based on the correctness and time, 
+ * This function takes in various parameters related to a game question and answer,
+ * determines whether the question is passed or not based on the correctness and time,
  * and returns an object containing all this information.
  *
  * @param {number|string} answer - The answer provided by the player.
@@ -260,25 +265,29 @@ export let timer =  {
  * @param {number} level - The current level of the game.
  * @returns {object} Returns an object containing all the details about the answer, question, and game state.
  */
-export const answerObject = (answer, correctAnswer, questionNumber,  isCorrect, time, level) => {
+export const answerObject = (
+  answer,
+  correctAnswer,
+  questionNumber,
+  isCorrect,
+  time,
+  level
+) => {
+  let passed;
+  // if the answer is correct and the time is greater than 0, the question is passed
+  if (isCorrect === true && time > 0) {
+    passed = true;
+  } else {
+    passed = false;
+  }
 
-    let passed; 
-    // if the answer is correct and the time is greater than 0, the question is passed
-    if (isCorrect === true && time > 0){
-        passed = true;
-    } else {
-        passed = false;
-    }
-
-    return {
-        answer: answer,
-        correctAnswer: correctAnswer,
-        questionNumber: questionNumber,
-        isCorrect: isCorrect,
-        time: time,
-        passes: passed,
-        level: level
-    }
-}
-
-
+  return {
+    answer: answer,
+    correctAnswer: correctAnswer,
+    questionNumber: questionNumber,
+    isCorrect: isCorrect,
+    time: time,
+    passes: passed,
+    level: level,
+  };
+};
