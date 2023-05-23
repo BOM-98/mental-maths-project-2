@@ -11,6 +11,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Roboto&display=swap"
         rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Mental Arithmetic Trainer</title>
@@ -25,8 +29,10 @@
             <div class="modal-content neomorphic">
                 <div class="modal-header">
                     <span class="close">&times;</span>
+                    <!--Modal Header Text-->
                     <h2>Welcome To The Arithmetic Coach!</h2>
                 </div>
+                <!--Modal Body Text-->
                 <div class="modal-body">
                     <p>The Mental Maths Coach offers a dynamic environment for practicing addition, subtraction,
                         multiplication, and division,
@@ -52,16 +58,19 @@
                         Good luck!
                     </p>
                 </div>
+                <!--Modal Footer-->
                 <div class="modal-footer">
                     <div id="start"><strong>Start</strong></div>
                 </div>
             </div>
-
         </div>
 
+        <!--Site Header Text-->
         <header class="header neomorphic">
             <h1>Mental Arithmetic Trainer</h1>
         </header>
+
+        <!--Statistics Section-->
         <section class="white-container stats">
             <div class="time neomorphic">
                 <h2 class="stat" id="time-heading">Time</h2>
@@ -79,6 +88,8 @@
                 <p id="percentage">0</p>
             </div>
         </section>
+
+        <!--Question and Answer Section-->
         <section class="white-container form">
             <div class="sum neomorphic">
                 <p><span id="operand1">0</span></p>
@@ -96,8 +107,11 @@
         <div class="calculator neomorphic" id="calculator">
         </div>
 
+        <!--Submission Button-->
         <button id="submit" class="neomorphic">Submit</button>
         <script type="module" src="assets/js/index.js"></script>
+
+        <!--Footer Section-->
         <footer>
             <h2>Created By Brian O'Mahony</h2>
             <button id="reset" class="neomorphic" onclick="location.reload()">Reset</button>
