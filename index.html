@@ -17,84 +17,89 @@
 </head>
 
 <body>
+    <main>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content neomorphic">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Welcome To The Arithmetic Coach!</h2>
-            </div>
-            <div class="modal-body">
-                <p>The Mental Maths Coach offers a dynamic environment for practicing addition, subtraction,
-                    multiplication, and division,
-                    with problems that automatically adjust in difficulty to keep you challenged and engaged. The game
-                    will keep moving up in levels, showing you increasingly more difficult sums,
-                    until you are getting them correct roughly 85% of the time - which has shown to be the optimal ratio
-                    for learning a new skill. To move up a level, you need to have answered 5 questions on that level,
-                    in under 60 seconds each, while maintaining an 85% score.</p>
-                <br>
-                <p>Your score is calculated and displayed in a green box at the top of the screen. It will automatically
-                    adjust as you answer each sum. You will need to reach a score higher than 85% to be eligible to
-                    progress to the next level. You can only move to the next level once you have answered
-                    5 questions on your current level.
-                </p>
-                <br>
-                <p>There are 18 levels in total - only mathematical geniuses will make it to level 18.
+            <!-- Modal content -->
+            <div class="modal-content neomorphic">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Welcome To The Arithmetic Coach!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>The Mental Maths Coach offers a dynamic environment for practicing addition, subtraction,
+                        multiplication, and division,
+                        with problems that automatically adjust in difficulty to keep you challenged and engaged. The
+                        game
+                        will keep moving up in levels, showing you increasingly more difficult sums,
+                        until you are getting them correct roughly 85% of the time - which has shown to be the optimal
+                        ratio
+                        for learning a new skill. To move up a level, you need to have answered 5 questions on that
+                        level,
+                        in under 60 seconds each, while maintaining an 85% score.</p>
                     <br>
-                    Good luck!
-                </p>
+                    <p>Your score is calculated and displayed in a green box at the top of the screen. It will
+                        automatically
+                        adjust as you answer each sum. You will need to reach a score higher than 85% to be eligible to
+                        progress to the next level. You can only move to the next level once you have answered
+                        5 questions on your current level.
+                    </p>
+                    <br>
+                    <p>There are 18 levels in total - only mathematical geniuses will make it to level 18.
+                        <br>
+                        Good luck!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <div id="start"><strong>Start</strong></div>
+                </div>
             </div>
-            <div class="modal-footer">
-                <div id="start"><strong>Start</strong></div>
-            </div>
+
         </div>
 
-    </div>
-
-    <header class="header neomorphic">
-        <h1>Mental Arithmetic Trainer</h1>
-    </header>
-    <section class="white-container stats">
-        <div class="time neomorphic">
-            <h2 class="stat" id="time-heading">Time</h2>
-            <p id="time">0</p>
-        </div>
-        <div class="level neomorphic">
-            <h2 class="stat">Level</h2>
-            <p id="level">0</p>
-        </div>
-        <div class="question neomorphic">
-            <h2 class="stat" id="question-stat">Question</h2>
-            <p id="question">0</p>
-        </div>
-        <div class="green-container neomorphic">
-            <p id="percentage">0</p>
-        </div>
-    </section>
-    <section class="white-container form">
-        <div class="sum neomorphic">
-            <p><span id="operand1">0</span></p>
-            <p><span id="operator">x</span></p>
-            <p><span id="operand2">0</span></p>
-            <p><span>=</span></p>
-        </div>
-        <div class="answer neomorphic">
-            <div class="answer-and-input">
-                <input type="text" class="display" id="answer" placeholder="Enter your answer">
+        <header class="header neomorphic">
+            <h1>Mental Arithmetic Trainer</h1>
+        </header>
+        <section class="white-container stats">
+            <div class="time neomorphic">
+                <h2 class="stat" id="time-heading">Time</h2>
+                <p id="time">0</p>
             </div>
+            <div class="level neomorphic">
+                <h2 class="stat">Level</h2>
+                <p id="level">0</p>
+            </div>
+            <div class="question neomorphic">
+                <h2 class="stat" id="question-stat">Question</h2>
+                <p id="question">0</p>
+            </div>
+            <div class="green-container neomorphic">
+                <p id="percentage">0</p>
+            </div>
+        </section>
+        <section class="white-container form">
+            <div class="sum neomorphic">
+                <p><span id="operand1">0</span></p>
+                <p><span id="operator">x</span></p>
+                <p><span id="operand2">0</span></p>
+                <p><span>=</span></p>
+            </div>
+            <div class="answer neomorphic">
+                <div class="answer-and-input">
+                    <input type="text" class="display" id="answer" placeholder="Enter your answer">
+                </div>
+            </div>
+        </section>
+        <div class="calculator neomorphic" id="calculator">
         </div>
-    </section>
-    <div class="calculator neomorphic" id="calculator">
-    </div>
 
-    <button id="submit" class="neomorphic">Submit</button>
-    <script type="module" src="assets/js/index.js"></script>
-    <footer>
-        <h2>Created By Brian O'Mahony</h2>
-    </footer>
+        <button id="submit" class="neomorphic">Submit</button>
+        <script type="module" src="assets/js/index.js"></script>
+        <footer>
+            <h2>Created By Brian O'Mahony</h2>
+        </footer>
+    </main>
 </body>
 
 </html>

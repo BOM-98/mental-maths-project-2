@@ -35,6 +35,14 @@ body {
   justify-content: space-between;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
