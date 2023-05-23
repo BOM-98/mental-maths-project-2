@@ -88,7 +88,8 @@
             </div>
             <div class="answer neomorphic">
                 <div class="answer-and-input">
-                    <input type="text" class="display" id="answer" placeholder="Enter your answer">
+                    <label for="answer">Answer:</label>
+                    <input type="text" class="display" id="answer" placeholder="Enter your answer" label="answer">
                 </div>
             </div>
         </section>
@@ -99,7 +100,7 @@
         <script type="module" src="assets/js/index.js"></script>
         <footer>
             <h2>Created By Brian O'Mahony</h2>
-            <button id="reset" class="neomorphic">Reset</button>
+            <button id="reset" class="neomorphic" onclick="location.reload()">Reset</button>
         </footer>
     </main>
 </body>

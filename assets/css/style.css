@@ -44,10 +44,6 @@ main {
   height: 100vh;
 }
 
-header{
-  min-height: 10vh;
-}
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -243,7 +239,7 @@ header{
 
 .answer-and-input {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
