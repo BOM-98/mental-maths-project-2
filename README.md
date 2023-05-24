@@ -32,7 +32,6 @@
     - [Wireframes](https://github.com/BOM-98/project_1#wireframes)
 - [Acknowledgements](https://github.com/BOM-98/project_1/blob/main/README.md#acknowledgements)
 
-
 ## Introduction
 
 Welcome to Mental Maths Trainer, a fun and flexible online tool that may be used to assist individuals improve their mental arithmetic abilities. Young pupils and adults looking to advance their mental agility and mathematical skill are both welcome on the platform.
@@ -48,7 +47,7 @@ The Mental Maths Trainer is an online application that will offer several advant
 The game has no end, the goal is to reach level 18 of the game, but if someone reaches level 18 they can continue for as long as they wish. This is to avoid putting restrictions on how long someone would like to train for. 
 
 
-![Header Image](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/responsive-images.png)
+![Header Image](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/am-i-responsive-displays.png)
 
 ## Design Choices
 
@@ -186,9 +185,9 @@ A sitemap HTML tag was also added to the root repository to enable Google to val
 
 ## Features
 
-The Mental Arithmatic website has numerous features, including an instruction modal, automatically generated sums, a question counter, a level incrementor, timer, score keeper, responsive buttons modal, submit and reset buttons.   
+The Mental Arithmetic website has numerous features, including an instruction modal, automatically generated sums, a question counter, a level incrementor, timer, score keeper, responsive buttons modal, submit and reset buttons.   
 
-### ![Responsive Display](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/responsive-images.png)
+### ![Responsive Display](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/am-i-responsive-displays.png)
 
 - ### Instruction Modal 
     
@@ -206,15 +205,14 @@ The Mental Arithmatic website has numerous features, including an instruction mo
     -   These sums are answered inside the blue input box below. 
     -   The sums generated gradually increase in difficulty as the user progresses into higher levels.
 
-![Automatically Generated Sums](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![Automatically Generated Sums](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/auto-generated-sums.png)
 
 - ### Statistics Container
     
     -   Metrics relevant to the user are displayed in a container above the auto-generated sums. 
     -   These metrics include the level the user is on, the number of questions answered, the time the user has left to answer the question and the percent of questions the user has passed. 
 
-![Automatically Generated Sums](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/auto-generated-sums.png)
-
+![Statistics Container](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/statistics-container)
 
 #### Question Counter
 
@@ -386,7 +384,7 @@ To ensure the site functions appropriately I conducted several tests. This inclu
     -   No errors were found when passing through the official  [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbom-98.github.io%2Fmental-maths-project-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
     ![Jigsaw Validator](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/css-validator.png)
    - Page Performance
-	   - Perfect 100% score across Performance, Accessibility, Best Practices & SEO on [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-bom-98-github-io-project_1/fjiqdvj3km?form_factor=desktop).
+	   - Above 90% score across Performance, Accessibility, Best Practices & SEO on [PageSpeed Insights] for Desktop(https://pagespeed.web.dev/analysis/https-bom-98-github-io-mental-maths-project-2/g1r9b9ffwx?form_factor=desktop).
        Desktop
        ![PageSpeed Desktop](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/desktop-pagespeedIndex.png)
        Mobile
@@ -421,15 +419,12 @@ To ensure the site functions appropriately I conducted several tests. This inclu
 
 The live link can be found [here](https://bom-98.github.io/mental-maths-project-2/). 
 
-
 ## Bugs / Issues
 
 There were a number of notable issues that arose while creating this website. Two of the most prominent issues that have arisen are detailed below.  
 
 -  While attempting to increment questions in the game, I noticed that every time I submitted an answer my website would increment the question for a split second and then reset to zero. I attempted to debug this using stackOverflow and chrome debugger within VS code but my program would perform the way I intended within the debugger and questions incremented with each answer submission. After a number of hours I realized that my input element was enclosed within a form element, and was therefore refreshing the page every time I submitted an answer, causing the question count to reset. Once I removed the form element my program performed as expected and the question count incremented with each submitted answer.
 - While working through my program with my mentor I realized that my levels were incrementing within the DOM but the questions were not getting any more difficult.  I used chrome debugger to investigate what the issue was and realised that my level parameter being passed to the adjustLevel function was stuck on 0, even though the levels were incrementing on the DOM. I later found that I had initialized a level variable globally that read the level from the dom element, but was not incrementing as the user moved up levels, and it was this variable that was being passed into the function. Once I corrected this bug the program performed as expected and the questions started increasing in difficulty again. 
-
-![Form Validation Bug](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/email-validation-bug.png).
 
 ## Credits
 
