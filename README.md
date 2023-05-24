@@ -178,11 +178,11 @@ To rank the website on Google Search, a Google HTML file was added to the root d
 
 The sitemap was uploaded to Google Search Console to improve page ranking on Google search.
 
-![Sitemap Upload](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/sitemap-submission-approval.png).
+![Sitemap Upload](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/google-sitemap-xml-verification.png).
 
 A sitemap HTML tag was also added to the root repository to enable Google to validate the site ownership. 
 
-![Sitemap HTML Upload](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/sitemap-html-file.png)
+![Sitemap HTML Upload](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/google-sitemap-html-verification.png)
 
 ## Features
 
@@ -198,7 +198,7 @@ The Mental Arithmatic website has numerous features, including an instruction mo
     -   The modal the disappears as the game starts. 
 
 
-![Instruction Modal](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/nav-bar-image.png)
+![Instruction Modal](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/instruction-modal.png)
 
 - ### Automatically Generated Sums
     
@@ -213,14 +213,14 @@ The Mental Arithmatic website has numerous features, including an instruction mo
     -   Metrics relevant to the user are displayed in a container above the auto-generated sums. 
     -   These metrics include the level the user is on, the number of questions answered, the time the user has left to answer the question and the percent of questions the user has passed. 
 
-![Automatically Generated Sums](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![Automatically Generated Sums](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/auto-generated-sums.png)
 
 
 #### Question Counter
 
 -   The quesiton counter is displayed within the statistics container and increments every time the user answers a question. 
 
-![Question Counter](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![Question Counter](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/question-counter.png)
 
 #### User Level Indicator
 
@@ -229,7 +229,7 @@ The Mental Arithmatic website has numerous features, including an instruction mo
 -   This answer object is then added to an array which contains an object instance for every question the user has answered.
 -   This array is iterated through by the adjustLevel function and if the user has answered 4 questions on that level and their score is above 85% it will increment their level and progress them onto harder sums.  
 
-![level-indicator](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![level-indicator](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/level-indicator.png)
 
 ```
 export const answerObject = (
@@ -267,7 +267,7 @@ export const answerObject = (
 -   The timer is  decremented every second. The colour of the timer box dynamically changes color depending on how much time the user has left. If the user has less than 10 seconds left, the box turns to a warning red to alert them. 
 -   If the timer reaches zero, a method is called which automatically inputs 0 as an answer in the question input which is guaranteed to be wrong and calls the checkAnswer() function which submits the answer and moves on to the next question. 
 
-![timer](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![timer](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/timer.png)
 
 ```
 export let timer = {
@@ -316,7 +316,7 @@ export let timer = {
 -   The score keeper box dynamically changes color depending on the score the user has. It will either be red, amber or green depending on how well the user is performing.
 -   This is controlled by the updatePercentage function shown below. This function takes in an array of the object instances for each answer submitted by the user and iterates through the array to calculate the user's score and update the score keeper's color. :  
 
-![Score Keeper](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![Score Keeper](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/score-keeper.png)
 
 ```
 export function updatePercentage(answerArray) {
@@ -353,14 +353,14 @@ export function updatePercentage(answerArray) {
 -   To account for this, I have inserted my own keyboard for the user that pops up when the screen is smaller than 400px.
 -   This avoids problems created by the default keyboards that pop up on android and iOS phones by avoiding the need for the user to depend on it. 
 
-![responsive-input-buttons](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![responsive-input-buttons](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/responsive-input-buttons.png)
 
 ### Submit and Reset Buttons
 
 -   The user can submit questions using the submit button if they would prefer. 
 -   The user can also restart the whole game by pressing/clicking the reset button which refreshes the whole page and starts the game again. 
 
-![submit and reset buttons](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![submit and reset buttons](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/submit-and-reset.png)
 
 ## Technologies Used: 
 
@@ -380,17 +380,17 @@ To ensure the site functions appropriately I conducted several tests. This inclu
 ### Validator Testing
 
 -   HTML
-    -   No errors were returned when passing through the official  [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbom-98.github.io%2Fproject_1%2Findex.html).
-    ![W3Cvalidator](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/html-validator-check.png)
+    -   No errors were returned when passing through the official  [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbom-98.github.io%2Fmental-maths-project-2%2F).
+    ![W3Cvalidator](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/html-validator.png)
 -   CSS
     -   No errors were found when passing through the official  [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbom-98.github.io%2Fmental-maths-project-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
-    ![Jigsaw Validator](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/css-validator-check.png)
+    ![Jigsaw Validator](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/css-validator.png)
    - Page Performance
 	   - Perfect 100% score across Performance, Accessibility, Best Practices & SEO on [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-bom-98-github-io-project_1/fjiqdvj3km?form_factor=desktop).
        Desktop
-       ![PageSpeed Desktop](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/pagespeed-test-result.png)
+       ![PageSpeed Desktop](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/desktop-pagespeedIndex.png)
        Mobile
-       ![PageSpeed Mobile](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/pagespeed-test-result-mobile.png) 
+       ![PageSpeed Mobile](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/mobile-pageSpeed-index.png) 
        
 ### Manual Testing
 
@@ -404,9 +404,9 @@ To ensure the site functions appropriately I conducted several tests. This inclu
 
 ### Automated Testing
 
-    - Unit testing was implemented using Mocha. These tests ensured that the generateNum1 function worked correctly as it has to reference both the digitParameters and gameLevelSettings data structures and generate the correct digits depending on the level of the game. Over 200 tests were implemented to ensure that the function worked across 9 different values at different levels of the game. 
-    [Unit Tests 1]()
-    [Unit Tests 2]()
+  - Unit testing was implemented using Mocha. These tests ensured that the generateNum1 function worked correctly as it has to reference both the digitParameters and gameLevelSettings data structures and generate the correct digits depending on the level of the game. Over 200 tests were implemented to ensure that the function worked across 9 different values at different levels of the game. 
+    [Unit Tests 1](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests.png)
+    [Unit Tests 2](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests-2.png)
 
 ## Deployment
 
@@ -450,7 +450,7 @@ There were a number of notable issues that arose while creating this website. Tw
 
 ### Images
 
-- The responsive website mockups were generated using [Am I Responsive](https://ui.dev/amiresponsive?url=https://bom-98.github.io/project_1/index.html).
+- The responsive website mockups were generated using [Am I Responsive](https://ui.dev/amiresponsive).
 - Colour scheme was displayed (not generated) using [Coolors](https://coolors.co/).
 - The favicon was sourced from [Flaticon](https://www.flaticon.com/free-icon/calculator_897368?term=maths&page=1&position=3&origin=search&related_id=897368)
 
