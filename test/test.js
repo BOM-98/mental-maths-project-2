@@ -2,11 +2,7 @@ import { assert } from 'chai';
 import sinon from 'sinon';
 import {generateNum1} from '../assets/js/math-functions.js';
 import {gameLevelSettings} from '../assets/js/data-structures.js';
-import { JSDOM } from 'jsdom';
 
-const dom = new JSDOM(`<!DOCTYPE html><p id="level">1</p>`);
-    global.document = dom.window.document;
-    global.window = dom.window;
 
 describe('generateNum1 function', function() {
 
