@@ -41,7 +41,7 @@ In order to keep users interested and challenged, Mental Maths Trainer provides 
 
 It has been demonstrated that practicing mental arithmetic improves cognitive functioning and neuroplasticity. Users who regularly practice mental arithmetic can get a variety of advantages in addition to better math abilities. Improved working memory, attention, and processing speed have all been shown as a result of practicing mental arithmetic, according to [research](https://psycnet.apa.org/record/2012-26807-001).
 
-The brain' ability to grow new neurons to adapt to a stimulus, known as neuroplasticity, is a key driver in developing mental arithmetic skills. Studies show that performing cognitive activities like mental addition and subtraction can boost neuroplasticity, [leading to stronger connections between neurons and improved brain function](see https://www.nature.com/articles/427311a).
+The brain' ability to grow new neurons to adapt to a stimulus, known as neuroplasticity, is a key driver in developing mental arithmetic skills. Studies show that performing cognitive activities like mental addition and subtraction can boost neuroplasticity, [leading to stronger connections between neurons and improved brain function](https://www.nature.com/articles/427311a).
 
 The Mental Maths Trainer is an online application that will offer several advantages, including higher performance in daily activities, increased neuroplasticity, and improved cognitive capacities. Users may get these benefits and see a good influence on their general cognitive development and daily lives by regularly practicing mental arithmetic with Mental Maths Trainer. Users will be working in an optimal environment that maximizes the development of their working memory, problem-solving skills, and task-focus.
 
@@ -133,7 +133,7 @@ In this color palette, the primary color (Argintinian Blue) and secondary color 
 
 Overall, this color palette provides a professional, engaging, and accessible experience for users, ensuring that the site's design aligns with its purpose and target personas.
 
-![Colour Palette](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/P2-colour-pallette-image.png)
+![Colour Palette](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/p2-color-palette.png)
 
 ### Typography
 
@@ -162,78 +162,19 @@ The home page was designed to show only pertinent information on the screen. Sta
 
 The center of the page features the sum to be answered and the input box that the user can use to answer the question. 
 
-![Wireframe1](https://github.com/BOM-98/project_1/blob/main/assets/images/desktop-wireframe.png)
+![Wireframe1](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/desktop-wireframe.png)
 
 #### Phone Page
 
 The mobile version condenses the statistics together and displays them as a column to improve the aesthetics of the layout.  
 
-![Wireframe2](https://github.com/BOM-98/project_1/blob/main/assets/images/phone-wireframe.png)
-
-
-### User Stories
-
-#### User Story 1: 
-
-- As the creator of a startup in the ideation stage, I'm looking for tools and advice on how to improve my business idea so that I can lay a solid foundation for my startup.
-- Scenario:
-	- Entrepreneur John, 30, is looking for advice on how to develop and validate a new business idea.
-	- He conducts an internet search for websites that provide startup founders with resources.
-	- John visits the Ideation blog page after finding the Startup Academy website.
-	- He discovers helpful tools and articles that assist him to refine his business ideas into a more workable plan.
-
-#### User Story 2: 
-
-- To build a solution that truly satisfies the demands of my customers, I need resources on knowing my target market and validating my idea. I am a startup founder working on customer discovery.
-
-- Scenario:
-	- A 35-year-old company founder named Jane is focusing on finding customers for her fresh app concept.
-	- She looks for information and tips online to help her understand her target market and validate her product.
-Jane finds the Startup Academy website and goes to the blog page on customer discovery.
-	- She discovers useful publications and tools that assist her in conducting efficient customer research and in honing her product offering.
-
-#### User Story 3: 
-
-- I'm a startup entrepreneur planning for fundraising, and I'm looking for information and advice on how to raise money so I may get the money I need to expand my company.
-
-- Scenario:
-
-	 - A 28-year-old company founder named Alex is getting ready to raise money for his enterprise.
-	- He looks online for information and advice on startup fundraising.
-	- Alex finds the Startup Academy website and visits the blog page for fundraising.
-	- He discovers resources and articles that are instructive, which helps him comprehend the fundraising procedure and create an engaging pitch for investors.
-
-#### User Story 4: 
-
-- To continue learning and incorporating fresh perspectives into my firm, I want to stay up to date on the most recent advice and tools for creating a successful startup.
-
-- Scenario:
-
-	- Lisa, a 32-year-old startup founder, is constantly looking for fresh perspectives and tools to advance her company.
-	- She finds the Startup Academy website and sees the subscription form.
-	- To obtain regular information on new blog entries and resources, Lisa subscribes to the newsletter.
-	- She gets routed to a thank you page after submitting the form, which confirms her subscription. She then starts getting helpful content from the Startup Academy in her mailbox regularly.
+![Wireframe2](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/phone-wireframe.png)
 
 ### Sitemap
 
-A sitemap was generated using [xml-sitemaps.com](https://www.xml-sitemaps.com/details-bom-98.github.io-4988e25b7.html). This was added to the root directory. 
+A sitemap was generated using [xml-sitemaps.com](https://www.xml-sitemaps.com/). This was added to the root directory. 
 
-Here is a general overview of the Sitemap: 
-
-- 1. [Home](https://bom-98.github.io/project_1/)
-- 2. Resources 
-	- 2.1 [Ideation](https://bom-98.github.io/project_1/ideation.html) 
-	- 2.2 [Customer Discovery](https://bom-98.github.io/project_1/customer_discovery.html)
-	- 2.3 [Fundraising](https://bom-98.github.io/project_1/fundraising.html) 
-	- 2.4 [Blog Home](https://bom-98.github.io/project_1/blog-home.html)
-- 3. [Newsletter Signup](https://bom-98.github.io/project_1/newsletter_signup.html)
-- 4. [Thank You](https://bom-98.github.io/project_1/thank_you.html)
-
-To rank the website on Google Search, a Google HTML file was added to the root directory (/workspaces/project_1/googleb4228df491edf6c8.html). I did not rename this file to something shorter and more readable as I was concerned about Google's ability to identify the file and verify the site if I did. 
-
-A visual skeleton of the website is shown in the below image.
-
-![sitemap](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/site-map-project-1.png)
+To rank the website on Google Search, a Google HTML file was added to the root directory (/workspaces/Mental-Maths-Project-2/googleb4228df491edf6c8.html). I did not rename this file to something shorter and more readable as I was concerned about Google's ability to identify the file and verify the site if I did. 
 
 The sitemap was uploaded to Google Search Console to improve page ranking on Google search.
 
@@ -245,33 +186,182 @@ A sitemap HTML tag was also added to the root repository to enable Google to val
 
 ## Features
 
-The Startup Academy website features a dedicated homepage where founders can instantly navigate to all the relevant resources contained on the site. This includes a responsive navigation bar, a tab section where users can toggle between blog content to arrive at the area most relevant to them, a form to sign up for the newsletter, a thank you page for anyone who has submitted a form, and three blog pages with content on Ideation, Customer Discovery, and Fundraising.  
+The Mental Arithmatic website has numerous features, including an instruction modal, automatically generated sums, a question counter, a level incrementor, timer, score keeper, responsive buttons modal, submit and reset buttons.   
 
 ### ![Responsive Display](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/responsive-images.png)
 
-- #### Navigation Bar
+- ### Instruction Modal 
     
-    -   Featured on all seven pages, the full responsive navigation bar includes links to the Logo, Home page, Blog Section, and Contact page and is identical on each page to allow for easy navigation.
-    -   This section will allow the user to easily navigate from page to page across all devices without having to revert to the previous page via the ‘back’ button.
-    - The navigation bar displays an active link to inform the user where they are currently on the website to assist navigation.
-    - The navigation bar collapses into a burger menu on smaller devices to avoid excessive space being consumed by the navigation area.
+    -   The instruction modal pops up on page load to explain to the user the purpose of the website and how to play.
+    -   It informs the user that there are 18 levels, and the game does not have a defined end. 
+    -   The start button is highlighted to begin the game, however the user can click anywhere on the page to start.
+    -   The modal the disappears as the game starts. 
 
- 
 
-![Nav Bar](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/nav-bar-image.png)
+![Instruction Modal](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/nav-bar-image.png)
 
-- #### **The landing page**
+- ### Automatically Generated Sums
     
-    -   The landing includes a photograph of the website mascot alongside text with relevant button links to inform the user of the website's purpose and provide easy navigation to further resources.
-    -   This section introduces the user to The Startup Academy with a neomorphic style for the hero section to portray a more modern feel for the website and make it feel more relevant for tech founders in particular.
+    -   The game automatically generates sums for the user to answer and displays them in a blue box.
+    -   These sums are answered inside the blue input box below. 
+    -   The sums generated gradually increase in difficulty as the user progresses into higher levels.
 
-![Hero Section](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+![Automatically Generated Sums](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+
+- ### Statistics Container
+    
+    -   Metrics relevant to the user are displayed in a container above the auto-generated sums. 
+    -   These metrics include the level the user is on, the number of questions answered, the time the user has left to answer the question and the percent of questions the user has passed. 
+
+![Automatically Generated Sums](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
 
 
-### Features Left to Implement
+#### Question Counter
 
--   I would have liked to connect the newsletter forms to an actual mailing list to enable users to receive new content regularly. This would involve creating a backend database and APIs to collect and store the user information, in addition to integrating with mailing software such as MailChimp to email new subscribers. 
--  I would like to make a full blog editor where I can quickly add new blog pages with the same layout and style without having to manually create a new page by writing HTML and CSS. This would involve creating an admin page where I could write new articles and publish them to the site. Information on how to do this is provided in the following [link](https://dev.to/themodernweb/fullstack-how-to-create-a-working-blogging-website-with-pure-html-css-and-js-in-2021-9di.).
+-   The quesiton counter is displayed within the statistics container and increments every time the user answers a question. 
+
+![Question Counter](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+
+#### User Level Indicator
+
+-   The user level indicator tells the user what level they are on.
+-   Every time the user answers a question, it is recorded as an object using a factory function (answerObject as seen below) with key value pairs that contain their answer, the correct answer, the question number, if their answer was correct, the time on the timer when the question was answered and if they passed the question (whether the answer is correct and answered in under 60 seconds and the level of the question). 
+-   This answer object is then added to an array which contains an object instance for every question the user has answered.
+-   This array is iterated through by the adjustLevel function and if the user has answered 4 questions on that level and their score is above 85% it will increment their level and progress them onto harder sums.  
+
+```
+export const answerObject = (
+  answer,
+  correctAnswer,
+  questionNumber,
+  isCorrect,
+  time,
+  level
+) => {
+  let passed;
+  // if the answer is correct and the time is greater than 0, the question is passed
+  if (isCorrect === true && time > 0) {
+    passed = true;
+  } else {
+    passed = false;
+  }
+
+  return {
+    answer: answer,
+    correctAnswer: correctAnswer,
+    questionNumber: questionNumber,
+    isCorrect: isCorrect,
+    time: time,
+    passes: passed,
+    level: level,
+  };
+};
+```
+
+![level-indicator](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+
+#### Timer
+
+-   The timer is controled using an the timer object as seen below.
+-   The timer tells the user how long them have left to answer the question.
+-   The timer is  decremented every second. The colour of the timer box dynamically changes color depending on how much time the user has left. If the user has less than 10 seconds left, the box turns to a warning red to alert them. 
+-   If the timer reaches zero, a method is called which automatically inputs 0 as an answer in the question input which is guaranteed to be wrong and calls the checkAnswer() function which submits the answer and moves on to the next question. 
+
+```
+export let timer = {
+  //timer set to 60 seconds at the beginning
+  time: 60,
+  //every second the tiner will decrease by 1
+  secondInterval: 1000,
+  start: function intervalSetter() {
+    setInterval(function () {
+      timer.time--;
+      //display the time in the time element
+      document.getElementById("time").innerHTML = timer.time;
+      //change the background color of the time element depending on the time left
+      if (timer.time > 40) {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-secondary-green )";
+      } else if (timer.time > 10 && timer.time <= 40) {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-warning-amber)";
+      } else {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-warning-red)";
+      }
+      //if the time is up, submit 0 as an answer and check the answer
+      // 0 is guaranteed to be an incorrect answer so the user will not pass the question
+      if (timer.time === 0) {
+        const display = document.getElementById("answer");
+        display.value = 0;
+        alert("Time is up!");
+        checkAnswer();
+      }
+    }, 1000);
+  },
+  //reset the timer to 60 seconds
+  reset: function () {
+    timer.time = 60;
+  },
+};
+```
+
+![timer](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+
+
+#### Score Keeper
+
+-   The score keeper tells the user what percentage of questions they have 'passed'. 
+-   To pass the user much have submitted the correct answer and in under 60 seconds.
+-   The user must maintain a score higher than 85% to progress to the next level. 
+-   The score keeper box dynamically changes color depending on the score the user has. It will either be red, amber or green depending on how well the user is performing.
+-   This is controlled by the updatePercentage function shown below. This function takes in an array of the object instances for each answer submitted by the user and iterates through the array to calculate the user's score and update the score keeper's color. :  
+
+```
+export function updatePercentage(answerArray) {
+  let percentPasses = Math.round(
+    (answerArray.filter((answer) => answer.passes === true).length /
+      answerArray.length) *
+      100
+  );
+  if (isNaN(percentPasses)) {
+    percentPasses = 0;
+  } else {
+    document.getElementById("percentage").innerText = percentPasses + "%";
+  }
+
+  if (percentPasses > 85) {
+    document.getElementsByClassName(
+      "green-container"
+    )[0].style.backgroundColor = "var(--global-color-secondary-green )";
+  } else if (percentPasses > 60) {
+    document.getElementsByClassName(
+      "green-container"
+    )[0].style.backgroundColor = "var(--global-color-warning-amber)";
+  } else {
+    document.getElementsByClassName(
+      "green-container"
+    )[0].style.backgroundColor = "var(--global-color-warning-red)";
+  }
+}
+```
+
+![Score Keeper](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+
+### Responsive Input Buttons
+
+-   If the screen is smaller than 400px, as on most phones, a keyboard pops up on screen when the user attempts to insert an input. This creates some issues from a usability perspective as it can hide certain elements behind the keyboard creating a negative user experience.  
+-   To account for this, I have inserted my own keyboard for the user that pops up when the screen is smaller than 400px.
+-   This avoids problems created by the default keyboards that pop up on android and iOS phones by avoiding the need for the user to depend on it. 
+
+![responsive-input-buttons](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+
+### Submit and Reset Buttons
+
+-   The user can submit questions using the submit button if they would prefer. 
+-   The user can also restart the whole game by pressing/clicking the reset button which refreshes the whole page and starts the game again. 
+
+![submit and reset buttons](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
 
 ## Technologies Used: 
 
@@ -325,7 +415,7 @@ To ensure the site functions appropriately I conducted several tests. This inclu
     -   From the source section drop-down menu, select the Master Branch.
     -   Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful .deployment.
 
-The live link can be found [here](https://bom-98.github.io/project_1/). 
+The live link can be found [here](https://bom-98.github.io/mental-maths-project-2/). 
 
 
 ## Bugs / Issues
