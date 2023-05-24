@@ -371,6 +371,14 @@ I used the following technologies, platforms and support in building my project:
 - Git was used for version control.
 - Designs were created using [Figma](https://figma.com/).
 
+## Javascript Logic
+
+Javascript was separated into three different files, index.js, math-functions.js and data-structures.js to follow best practices and separation of concerns.
+
+The order and logic of the functions in the website are outlined in the diagram below. 
+
+![Javascript Logic](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/javascript-logic.png)
+
 ## Testing
 
 To ensure the site functions appropriately I conducted several tests. This includes HTML, CSS, and Javascript testing. 
@@ -403,8 +411,9 @@ To ensure the site functions appropriately I conducted several tests. This inclu
 ### Automated Testing
 
   - Unit testing was implemented using Mocha. These tests ensured that the generateNum1 function worked correctly as it has to reference both the digitParameters and gameLevelSettings data structures and generate the correct digits depending on the level of the game. Over 200 tests were implemented to ensure that the function worked across 9 different values at different levels of the game. 
-    ![Unit Tests 1](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests.png)
-    ![Unit Tests 2](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests-2.png)
+
+  ![Unit Tests 1](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests.png)
+  ![Unit Tests 2](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests-2.png)
 
 ## Deployment
 
