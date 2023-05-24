@@ -212,7 +212,7 @@ The Mental Arithmetic website has numerous features, including an instruction mo
     -   Metrics relevant to the user are displayed in a container above the auto-generated sums. 
     -   These metrics include the level the user is on, the number of questions answered, the time the user has left to answer the question and the percent of questions the user has passed. 
 
-![Statistics Container](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/statistics-container)
+![Statistics Container](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/statistics-container.png)
 
 #### Question Counter
 
@@ -403,8 +403,8 @@ To ensure the site functions appropriately I conducted several tests. This inclu
 ### Automated Testing
 
   - Unit testing was implemented using Mocha. These tests ensured that the generateNum1 function worked correctly as it has to reference both the digitParameters and gameLevelSettings data structures and generate the correct digits depending on the level of the game. Over 200 tests were implemented to ensure that the function worked across 9 different values at different levels of the game. 
-    [Unit Tests 1](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests.png)
-    [Unit Tests 2](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests-2.png)
+    ![Unit Tests 1](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests.png)
+    ![Unit Tests 2](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests-2.png)
 
 ## Deployment
 
