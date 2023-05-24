@@ -229,6 +229,8 @@ The Mental Arithmatic website has numerous features, including an instruction mo
 -   This answer object is then added to an array which contains an object instance for every question the user has answered.
 -   This array is iterated through by the adjustLevel function and if the user has answered 4 questions on that level and their score is above 85% it will increment their level and progress them onto harder sums.  
 
+![level-indicator](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
+
 ```
 export const answerObject = (
   answer,
@@ -258,14 +260,14 @@ export const answerObject = (
 };
 ```
 
-![level-indicator](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
-
 #### Timer
 
 -   The timer is controled using an the timer object as seen below.
 -   The timer tells the user how long them have left to answer the question.
 -   The timer is  decremented every second. The colour of the timer box dynamically changes color depending on how much time the user has left. If the user has less than 10 seconds left, the box turns to a warning red to alert them. 
 -   If the timer reaches zero, a method is called which automatically inputs 0 as an answer in the question input which is guaranteed to be wrong and calls the checkAnswer() function which submits the answer and moves on to the next question. 
+
+![timer](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
 
 ```
 export let timer = {
@@ -306,9 +308,6 @@ export let timer = {
 };
 ```
 
-![timer](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
-
-
 #### Score Keeper
 
 -   The score keeper tells the user what percentage of questions they have 'passed'. 
@@ -316,6 +315,8 @@ export let timer = {
 -   The user must maintain a score higher than 85% to progress to the next level. 
 -   The score keeper box dynamically changes color depending on the score the user has. It will either be red, amber or green depending on how well the user is performing.
 -   This is controlled by the updatePercentage function shown below. This function takes in an array of the object instances for each answer submitted by the user and iterates through the array to calculate the user's score and update the score keeper's color. :  
+
+![Score Keeper](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
 
 ```
 export function updatePercentage(answerArray) {
@@ -346,8 +347,6 @@ export function updatePercentage(answerArray) {
 }
 ```
 
-![Score Keeper](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/hero-section-image.png)
-
 ### Responsive Input Buttons
 
 -   If the screen is smaller than 400px, as on most phones, a keyboard pops up on screen when the user attempts to insert an input. This creates some issues from a usability perspective as it can hide certain elements behind the keyboard creating a negative user experience.  
@@ -368,11 +367,11 @@ export function updatePercentage(answerArray) {
 I used the following technologies, platforms and support in building my project: 
 
 - I used [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), an extension within Visual Studio Code to visualize and test my website as I was creating it.
-- Adobe Illustrator was used to edit the .EPS documents created by [catalyststuff](https://www.freepik.com/author/catalyststuff).
 - [Visual Studio Code](https://code.visualstudio.com/) was the IDE used to create the website.
+- Visual studio code 'Chrome Debugger' was used for testing different aspects of the code and debugging line-by-line. 
 - [Github](https://github.com/) was used for the project repository.
 - Git was used for version control.
-- Wireframes were created using [Balsamiq](https://balsamiq.com/).
+- Designs were created using [Figma](https://figma.com/).
 
 ## Testing
 
@@ -384,7 +383,7 @@ To ensure the site functions appropriately I conducted several tests. This inclu
     -   No errors were returned when passing through the official  [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbom-98.github.io%2Fproject_1%2Findex.html).
     ![W3Cvalidator](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/html-validator-check.png)
 -   CSS
-    -   No errors were found when passing through the official  [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbom-98.github.io%2Fproject_1%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+    -   No errors were found when passing through the official  [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbom-98.github.io%2Fmental-maths-project-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
     ![Jigsaw Validator](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/css-validator-check.png)
    - Page Performance
 	   - Perfect 100% score across Performance, Accessibility, Best Practices & SEO on [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-bom-98-github-io-project_1/fjiqdvj3km?form_factor=desktop).
@@ -396,13 +395,18 @@ To ensure the site functions appropriately I conducted several tests. This inclu
 ### Manual Testing
 
 - For each new page implementation
-    - every page link was checked to make sure they redirected to the correct source.
+    - every page button was checked to make sure they performed the correct action.
     - every element was checked to make sure they were sized correctly and resized as expected with different screen dimensions.
-    - external links were checked to make sure they opened a new tab and directed to the correct source.
-    - forms were checked for defensive coding (field validation, error message for wrong input and mandatory fields) and correct submission redirects to the thank you page.
+    - The input was checked for defensive coding (error message for wrong input) and correctly initiated the next question.
     - Google dev tools were checked to make sure there was no errors logged to the console for any Javascript functions that were invoked.
     - compatibility tests were done for different browsers.
-- I received additional manual testing help on the #peer-code-review channel to make sure all links and javascript functions worked as intended.
+- I received additional manual testing help from my mentor and several other people to check as many edge cases as possible.
+
+### Automated Testing
+
+    - Unit testing was implemented using Mocha. These tests ensured that the generateNum1 function worked correctly as it has to reference both the digitParameters and gameLevelSettings data structures and generate the correct digits depending on the level of the game. Over 200 tests were implemented to ensure that the function worked across 9 different values at different levels of the game. 
+    [Unit Tests 1]()
+    [Unit Tests 2]()
 
 ## Deployment
 
@@ -420,9 +424,10 @@ The live link can be found [here](https://bom-98.github.io/mental-maths-project-
 
 ## Bugs / Issues
 
-There were a number of notable issues that arose while creating this website. Two of the most prominent issues that have arised are detailed below.  
+There were a number of notable issues that arose while creating this website. Two of the most prominent issues that have arisen are detailed below.  
 
-While attempting to increment levels in the game, I noticed that 
+-  While attempting to increment questions in the game, I noticed that every time I submitted an answer my website would increment the question for a split second and then reset to zero. I attempted to debug this using stackOverflow and chrome debugger within VS code but my program would perform the way I intended within the debugger and questions incremented with each answer submission. After a number of hours I realized that my input element was enclosed within a form element, and was therefore refreshing the page every time I submitted an answer, causing the question count to reset. Once I removed the form element my program performed as expected and the question count incremented with each submitted answer.
+- While working through my program with my mentor I realized that my levels were incrementing within the DOM but the questions were not getting any more difficult.  I used chrome debugger to investigate what the issue was and realised that my level parameter being passed to the adjustLevel function was stuck on 0, even though the levels were incrementing on the DOM. I later found that I had initialized a level variable globally that read the level from the dom element, but was not incrementing as the user moved up levels, and it was this variable that was being passed into the function. Once I corrected this bug the program performed as expected and the questions started increasing in difficulty again. 
 
 ![Form Validation Bug](https://github.com/BOM-98/project_1/blob/main/assets/images/README_images/email-validation-bug.png).
 
