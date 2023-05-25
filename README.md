@@ -39,7 +39,7 @@ The game has no end, the goal is to reach level 18 of the game, but if someone r
 
 - Age: 18-60
 - Profession: Disciplines that require focused concentration for long periods of time, and typically can tax working memory and problem solving skills. People still in education would not be considered part of the target audience as they are still engaged in continuous learning and do not have as much of a need to 'work out' their brains in the general sense. 
-- Motivation: Either to improve the general congitive capacities of the human brain for application in work and everyday life or to specifically improve arithmatic abilities due to embarrasment or fear over an inability to perform mental calculations. 
+- Motivation: Either to improve the general cognitive capacities of the human brain for application in work and everyday life or to specifically improve arithmetic abilities due to embarrassment or fear over an inability to perform mental calculations. 
 
 #### Target Persona: Jessica, the Busy Professional
 
@@ -89,7 +89,7 @@ Michael wants to engage in challenging mental activities that will not only shar
 
 All design decisions incorporated into the web app were made keeping these target personas and their problems, motivations and jobs to be done in mind. 
 
-### Colour Scheme
+### Color Scheme
 
 1. Background Color: Anti-flash white (#F3F4F5)
    - This off-white color maintains a clean, neutral backdrop for content while reducing eye strain caused by the high contrast of pure white. It also maintains sufficient contrast with the text color (Dark Gray) to ensure readability and accessibility.
@@ -101,7 +101,7 @@ All design decisions incorporated into the web app were made keeping these targe
    - A lighter, more approachable shade of blue that complements the primary color. It can be used for buttons, links, and other interactive elements to create a sense of engagement and accessibility. Represents trust, professionalism, and intelligence. Perfect for conveying the educational and cognitive improvement aspects of the website.
    
 4. Highlight Color: Lime Green (#09CE28)
-   - A sharp green colour to draw attention to the most important statistics the user will need to keep in mind. This colour can be adjusted in opacity to create a softer feel on the eyes, while maintining its contrast with other elements. This colour will be used sparingly to maintain its importance. 
+   - A sharp green color to draw attention to the most important statistics the user will need to keep in mind. This color can be adjusted in opacity to create a softer feel on the eyes, while maintaining its contrast with other elements. This color will be used sparingly to maintain its importance. 
 
 5. Warning Color: Red (#FF0000)
    - A sharp color to draw attention to timers that are about to run out or scores that have fallen low. This red will only be displayed dynamically as indicators on the screen show the user is running out of time or performing poorly.
@@ -110,9 +110,9 @@ All design decisions incorporated into the web app were made keeping these targe
 
 When designing the website, it's crucial to ensure that the color contrast ratios meet the Web Content Accessibility Guidelines (WCAG) standards. This will guarantee that users with visual impairments can easily access and navigate the site.
 
-In this color palette, the primary color (Argintinian Blue) and secondary color (Eerie black) provide sufficient contrast against the white background. However, the highlight color (Lime Green) is used sparingly and with caution, as it may not provide enough contrast against the white background for some users.
+In this color palette, the primary color (Argentinian Blue) and secondary color (Eerie black) provide sufficient contrast against the white background. However, the highlight color (Lime Green) is used sparingly and with caution, as it may not provide enough contrast against the white background for some users.
 
-Overall, this color palette provides a professional, engaging, and accessible experience for users, ensuring that the site's design aligns with its purpose and target personas.
+Overall, this color palette provides a professional, engaging, and accessible experience for users, ensuring that the site's design aligns with its purpose and target personas. The closest contrast issue occurs when white text is placed inside blue buttons or containers. The contrast problem was deemed to not be significant enough to sacrifice the aesthetics of the buttons and containers, especially since Revolut - widely considered to have a fantastic UI/UX - adopts this pattern themselves, as seen on their [website](https://www.revolut.com/). 
 
 ![Colour Palette](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/p2-color-palette.png)
 
@@ -139,7 +139,7 @@ I created my wireframe using Figma.
 
 #### Desktop Page
 
-The home page was designed to show only pertinent information on the screen. Statistical indicators including time, level and quesiton number are displayed across the top. On the very right of the statistics container a box displays the current percentage of questions the user is getting correct and on time. the user will need to keep this score above 85% to progress to further levels. 
+The home page was designed to show only pertinent information on the screen. Statistical indicators including time, level and question number are displayed across the top. On the very right of the statistics container a box displays the current percentage of questions the user is getting correct and on time. the user will need to keep this score above 85% to progress to further levels. 
 
 The center of the page features the sum to be answered and the input box that the user can use to answer the question. 
 
@@ -169,7 +169,7 @@ A sitemap HTML tag was also added to the root repository to enable Google to val
 
 The Mental Arithmetic website has numerous features, including an instruction modal, automatically generated sums, a question counter, a level incrementor, timer, score keeper, responsive buttons modal, submit and reset buttons.   
 
-### ![Homepage Display](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/homepage.png)
+### ![Homepage Display](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/homescreen.png)
 
 - ### Instruction Modal 
     
@@ -242,9 +242,9 @@ export const answerObject = (
 
 - #### Timer
 
--   The timer is controled using an the timer object as seen below.
+-   The timer is controlled using an the timer object as seen below.
 -   The timer tells the user how long them have left to answer the question.
--   The timer is  decremented every second. The colour of the timer box dynamically changes color depending on how much time the user has left. If the user has less than 10 seconds left, the box turns to a warning red to alert them. 
+-   The timer is  decremented every second. The color of the timer box dynamically changes color depending on how much time the user has left. If the user has less than 10 seconds left, the box turns to a warning red to alert them. 
 -   If the timer reaches zero, a method is called which automatically inputs 0 as an answer in the question input which is guaranteed to be wrong and calls the checkAnswer() function which submits the answer and moves on to the next question. 
 
 ![timer](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/timer.png)
@@ -253,7 +253,7 @@ export const answerObject = (
 export let timer = {
   //timer set to 60 seconds at the beginning
   time: 60,
-  //every second the tiner will decrease by 1
+  //every second the timer will decrease by 1
   secondInterval: 1000,
   start: function intervalSetter() {
     setInterval(function () {
@@ -431,7 +431,7 @@ The live link can be found [here](https://bom-98.github.io/mental-maths-project-
 There were a number of notable issues that arose while creating this website. Two of the most prominent issues that have arisen are detailed below.  
 
 -  While attempting to increment questions in the game, I noticed that every time I submitted an answer my website would increment the question for a split second and then reset to zero. I attempted to debug this using stackOverflow and chrome debugger within VS code but my program would perform the way I intended within the debugger and questions incremented with each answer submission. After a number of hours I realized that my input element was enclosed within a form element, and was therefore refreshing the page every time I submitted an answer, causing the question count to reset. Once I removed the form element my program performed as expected and the question count incremented with each submitted answer.
-- While working through my program with my mentor I realized that my levels were incrementing within the DOM but the questions were not getting any more difficult.  I used chrome debugger to investigate what the issue was and realised that my level parameter being passed to the adjustLevel function was stuck on 0, even though the levels were incrementing on the DOM. I later found that I had initialized a level variable globally that read the level from the dom element, but was not incrementing as the user moved up levels, and it was this variable that was being passed into the function. Once I corrected this bug the program performed as expected and the questions started increasing in difficulty again. 
+- While working through my program with my mentor I realized that my levels were incrementing within the DOM but the questions were not getting any more difficult.  I used chrome debugger to investigate what the issue was and realized that my level parameter being passed to the adjustLevel function was stuck on 0, even though the levels were incrementing on the DOM. I later found that I had initialized a level variable globally that read the level from the dom element, but was not incrementing as the user moved up levels, and it was this variable that was being passed into the function. Once I corrected this bug the program performed as expected and the questions started increasing in difficulty again. 
 
 ## Credits
 
