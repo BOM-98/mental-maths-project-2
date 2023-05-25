@@ -215,6 +215,7 @@ const questionTextManager = function () {
  * Clicking a button will trigger a calculation function that updates the display's value based on the clicked button's value.
  */
 const manageCalculator = function () {
+/* Calculator code and outline attributed to Coding Nepal's Website Code*/
   // Get the calculator div
   const calculatorDiv = document.getElementById("calculator");
 
