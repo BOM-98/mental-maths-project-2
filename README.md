@@ -5,7 +5,7 @@
 - [Introduction](https://github.com/BOM-98/mental-maths-project-2#introduction)
 - [Design Choices](https://github.com/BOM-98/mental-maths-project-2#design-choices)
 - [Features](https://github.com/BOM-98/mental-maths-project-2#features)
-- [Features Left to Implement](https://github.com/BOM-98/project_1#features-left-to-implement)
+- [Features Left to Implement](https://github.com/BOM-98/mental-maths-project-2#features-left-to-implement)
 - [Technologies Used](https://github.com/BOM-98/mental-maths-project-2#technologies-used)
 - [Javascript Logic](https://github.com/BOM-98/mental-maths-project-2#javascript-logic)
 - [Testing](https://github.com/BOM-98/mental-maths-project-2#testing)
@@ -341,6 +341,20 @@ export function updatePercentage(answerArray) {
 -   The user can also restart the whole game by pressing/clicking the reset button which refreshes the whole page and starts the game again. 
 
 ![submit and reset buttons](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/submit-and-reset.png)
+
+## Features Left To Implement
+
+- ### Progress Bar
+- I would have liked to have included a progress bar for people to be able to see how close there were to the final level, or alternatively how close they were to reaching the next level if they got all the questions right. This would have added a little more gamification to the site. 
+
+- ### Profiles & Database
+- While outside the scope for this project, I would have liked to have given people the option to create profiles, and store their results in a database so that I could keep them on the same level as their previous session. This would avoid the need for people to work their way back up multiple levels to get to their optimal level of difficulty. This would better serve the purpose of the website, enabling users to maximize their skill progression with each session. 
+
+- ### Points, Rankings and Leaderboards
+- One way to gamify the website further would be to introduce points that are earned based on the difficulty of the question and how long it took the user to answer the question. These points would accumulate from the beginning of each session. We could set the game to have a set time limit e.g. 10 minutes, and then rank players based on location e.g. you are 100th out of 300 people in Dublin (66th Percentile). 
+
+- ### Analytics Dashboard
+- If profiles and points are implemented, a dashboard page could be created that would enable users to see their progression over time as they use the app and quantify how they are improving. This could graph the points earned per question and the average difficulty of each question for the user as a line chart over time. 
 
 ## Technologies Used: 
 
