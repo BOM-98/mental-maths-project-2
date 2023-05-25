@@ -249,45 +249,6 @@ export const answerObject = (
 
 ![timer](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/timer.png)
 
-```
-export let timer = {
-  //timer set to 60 seconds at the beginning
-  time: 60,
-  //every second the timer will decrease by 1
-  secondInterval: 1000,
-  start: function intervalSetter() {
-    setInterval(function () {
-      timer.time--;
-      //display the time in the time element
-      document.getElementById("time").innerHTML = timer.time;
-      //change the background color of the time element depending on the time left
-      if (timer.time > 40) {
-        document.getElementsByClassName("time")[0].style.backgroundColor =
-          "var(--global-color-secondary-green )";
-      } else if (timer.time > 10 && timer.time <= 40) {
-        document.getElementsByClassName("time")[0].style.backgroundColor =
-          "var(--global-color-warning-amber)";
-      } else {
-        document.getElementsByClassName("time")[0].style.backgroundColor =
-          "var(--global-color-warning-red)";
-      }
-      //if the time is up, submit 0 as an answer and check the answer
-      // 0 is guaranteed to be an incorrect answer so the user will not pass the question
-      if (timer.time === 0) {
-        const display = document.getElementById("answer");
-        display.value = 0;
-        alert("Time is up!");
-        checkAnswer();
-      }
-    }, 1000);
-  },
-  //reset the timer to 60 seconds
-  reset: function () {
-    timer.time = 60;
-  },
-};
-```
-
 - #### Score Keeper
 
 -   The score keeper tells the user what percentage of questions they have 'passed'. 
@@ -356,7 +317,7 @@ export function updatePercentage(answerArray) {
 - ### Analytics Dashboard
 - If profiles and points are implemented, a dashboard page could be created that would enable users to see their progression over time as they use the app and quantify how they are improving. This could graph the points earned per question and the average difficulty of each question for the user as a line chart over time. 
 
-## Technologies Used: 
+## Technologies/Tools Used: 
 
 I used the following technologies, platforms and support in building my project: 
 
@@ -366,6 +327,9 @@ I used the following technologies, platforms and support in building my project:
 - [Github](https://github.com/) was used for the project repository.
 - Git was used for version control.
 - Designs were created using [Figma](https://figma.com/).
+- Responsiveness Testing was done with [ResponsivelyApp](https://responsively.app/)
+- Accessibility Testing was assisted with [Wave](https://wave.webaim.org/)
+- Flow Diagrams were created using [LucidChart](https://www.lucidchart.com/)
 
 ## Javascript Logic
 
@@ -413,6 +377,17 @@ To ensure the site functions appropriately I conducted several tests. This inclu
   ![Unit Tests 1](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests.png)
   ![Unit Tests 2](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests-2.png)
 
+### Responsiveness Testing
+
+- Testing for responsiveness was conducted using Chrome Dev Tools and ResponsivelyApp.
+- The website was tested extensively on a range of emulated mobile, tablet and large format screen sizes in both portrait and landscape orientations.
+
+![ResponsivelyApp Output](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/responsivelyApp.png)
+
+### Accessibility Testing
+
+- The site was audited using [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to evaluate implementation of best practices and accessibility guidelines.
+
 ## Deployment
 
 -   The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -455,7 +430,6 @@ There were a number of notable issues that arose while creating this website. Tw
 - The responsive website mockups were generated using [Am I Responsive](https://ui.dev/amiresponsive).
 - Colour scheme was displayed (not generated) using [Coolors](https://coolors.co/).
 - The favicon was sourced from [Flaticon](https://www.flaticon.com/free-icon/calculator_897368?term=maths&page=1&position=3&origin=search&related_id=897368)
-
 
 ### Favicon
 
