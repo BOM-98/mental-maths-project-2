@@ -169,7 +169,7 @@ A sitemap HTML tag was also added to the root repository to enable Google to val
 
 The Mental Arithmetic website has numerous features, including an instruction modal, automatically generated sums, a question counter, a level incrementor, timer, score keeper, responsive buttons modal, submit and reset buttons.   
 
-### ![Responsive Display](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/am-i-responsive-displays.png)
+### ![Homepage Display](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/homepage.png)
 
 - ### Instruction Modal 
     
@@ -421,8 +421,8 @@ To ensure the site functions appropriately I conducted several tests. This inclu
     - Once files were added to the staging area, I committed my files using 'git commit -m 'my message'.
     - Once my changes had been committed, I pushed the changes to the remote repository using 'git push' in the terminal. 
     - In the GitHub repository, navigate to the Settings tab.
-    -   From the source section drop-down menu, select the Master Branch.
-    -   Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful .deployment.
+    -   From the source section drop-down menu, select the main Branch.
+    -   Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful .deployment.
 
 The live link can be found [here](https://bom-98.github.io/mental-maths-project-2/). 
 
