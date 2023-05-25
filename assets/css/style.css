@@ -297,6 +297,13 @@ footer h2 {
   justify-content: center;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /*styling for reset button*/
 #reset{
   background-color: var(--global-color-warning-red);
