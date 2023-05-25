@@ -43,7 +43,6 @@ main {
   justify-content: center; /* Align flex items vertically in center */
   align-items: center; /* Align flex items horizontally in center */
   width: 100%; /* Make main content area take up full viewport width */
-  height: 100vh; /* Make main content area take up full viewport height */
 }
 
 /* The Modal (background) */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link
-        media="print" onload="this.onload=null;this.removeAttribute('media');"
+    <link media="print" onload="this.onload=null;this.removeAttribute('media');"
         href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Roboto&display=swap"
         rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -19,7 +19,12 @@
     <link rel="manifest" href="/site.webmanifest">
     <title>Mental Arithmetic Trainer</title>
 </head>
+
 <body>
+    <!--Site Header Text-->
+    <header class="header neomorphic">
+        <h1>Mental Arithmetic Trainer</h1>
+    </header>
     <main>
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -64,11 +69,6 @@
             </div>
         </div>
 
-        <!--Site Header Text-->
-        <header class="header neomorphic">
-            <h1>Mental Arithmetic Trainer</h1>
-        </header>
-
         <!--Statistics Section-->
         <section class="white-container stats">
             <div class="time neomorphic">
@@ -105,16 +105,15 @@
         </div>
         <div class="calculator neomorphic" id="calculator">
         </div>
-
-        <!--Submission Button-->
-        <button id="submit" class="neomorphic">Submit</button>
-        <script type="module" src="assets/js/index.js"></script>
-
-        <!--Footer Section-->
-        <footer>
-            <h2>Created By Brian O'Mahony</h2>
-            <button id="reset" class="neomorphic" onclick="location.reload()">Reset</button>
-        </footer>
     </main>
+    <!--Submission Button-->
+    <button id="submit" class="neomorphic">Submit</button>
+    <!--Footer Section-->
+    <footer>
+        <h2>Created By Brian O'Mahony</h2>
+        <button id="reset" class="neomorphic" onclick="location.reload()">Reset</button>
+    </footer>
+    <script type="module" src="assets/js/index.js"></script>
 </body>
+
 </html>
