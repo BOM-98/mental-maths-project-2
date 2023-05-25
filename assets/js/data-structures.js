@@ -1,5 +1,3 @@
-import { checkAnswer } from "./index.js";
-
 // digitParameters contains the information for the min and max values for each digit.
 // Each operation (addition, subtraction, multiplication, division) has 5 levels of diffiuclty.
 // Depending on the level the user is on in the game, the min and max values for each digit will change.
@@ -211,44 +209,6 @@ export let gameLevelSettings = [
     digitParameters.division[5],
   ],
 ];
-
-// timer object which contains data and methods to control the timer displayed in time 'time' element
-export let timer = {
-  //timer set to 60 seconds at the beginning
-  time: 60,
-  //every second the tiner will decrease by 1
-  secondInterval: 1000,
-  start: function intervalSetter() {
-    setInterval(function () {
-      timer.time--;
-      //display the time in the time element
-      document.getElementById("time").innerHTML = timer.time;
-      //change the background color of the time element depending on the time left
-      if (timer.time > 40) {
-        document.getElementsByClassName("time")[0].style.backgroundColor =
-          "var(--global-color-secondary-green )";
-      } else if (timer.time > 10 && timer.time <= 40) {
-        document.getElementsByClassName("time")[0].style.backgroundColor =
-          "var(--global-color-warning-amber)";
-      } else {
-        document.getElementsByClassName("time")[0].style.backgroundColor =
-          "var(--global-color-warning-red)";
-      }
-      //if the time is up, submit 0 as an answer and check the answer
-      // 0 is guaranteed to be an incorrect answer so the user will not pass the question
-      if (timer.time === 0) {
-        const display = document.getElementById("answer");
-        display.value = 0;
-        alert("Time is up!");
-        checkAnswer();
-      }
-    }, 1000);
-  },
-  //reset the timer to 60 seconds
-  reset: function () {
-    timer.time = 60;
-  },
-};
 
 /**
  * Creates and returns an answer object for a game question.

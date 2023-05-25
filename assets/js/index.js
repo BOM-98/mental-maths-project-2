@@ -1,4 +1,4 @@
-import { timer, answerObject } from "./data-structures.js";
+import { answerObject } from "./data-structures.js";
 import {
   calculateCorrectAnswer,
   gameDecider,
@@ -119,7 +119,7 @@ function runGame(gameType) {
  * Depending on whether the answer is correct, it shows an appropriate alert message.
  * Finally, it starts a new round of the game with a randomly decided game type.
  */
-export function checkAnswer() {
+function checkAnswer() {
   // Get the user's answer from input field and parse it as an integer
   let userAnswer = parseInt(document.getElementById("answer").value);
 
@@ -291,6 +291,44 @@ const manageCalculator = function () {
     // set calculatorAdded to false
     calculatorAdded = false;
   }
+};
+
+// timer object which contains data and methods to control the timer displayed in time 'time' element
+let timer = {
+  //timer set to 60 seconds at the beginning
+  time: 60,
+  //every second the tiner will decrease by 1
+  secondInterval: 1000,
+  start: function intervalSetter() {
+    setInterval(function () {
+      timer.time--;
+      //display the time in the time element
+      document.getElementById("time").innerHTML = timer.time;
+      //change the background color of the time element depending on the time left
+      if (timer.time > 40) {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-secondary-green )";
+      } else if (timer.time > 10 && timer.time <= 40) {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-warning-amber)";
+      } else {
+        document.getElementsByClassName("time")[0].style.backgroundColor =
+          "var(--global-color-warning-red)";
+      }
+      //if the time is up, submit 0 as an answer and check the answer
+      // 0 is guaranteed to be an incorrect answer so the user will not pass the question
+      if (timer.time === 0) {
+        const display = document.getElementById("answer");
+        display.value = 0;
+        alert("Time is up!");
+        checkAnswer();
+      }
+    }, 1000);
+  },
+  //reset the timer to 60 seconds
+  reset: function () {
+    timer.time = 60;
+  },
 };
 
 // when the window size changes, the calculator is added or removed as necessary
