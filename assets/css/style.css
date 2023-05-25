@@ -284,6 +284,7 @@ form {
   width: 50%;
   align-self: center;
   margin: 2rem 0;
+  cursor: pointer;
 }
 
 /*styling for footer section*/
@@ -307,6 +308,7 @@ footer h2 {
   width: 50%;
   align-self: center;
   margin: 2rem 0;
+  cursor: pointer;
 }
 
 /* Styling for screens smaller than 1000px wide. 
