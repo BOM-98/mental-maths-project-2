@@ -2,35 +2,17 @@
 > # Mental Maths Trainer
 
 ## Table of Contents
-- [Introduction](https://github.com/BOM-98/project_1#introduction)
-- [Design Choices](https://github.com/BOM-98/project_1#design-choices)
-    - [Colour Scheme](https://github.com/BOM-98/project_1#colour-scheme)
-    - [Wire Frames](https://github.com/BOM-98/project_1#wire-frames)
-    - [User Stories](https://github.com/BOM-98/project_1#user-stories)
-    - [Sitemap](https://github.com/BOM-98/project_1#sitemap)
-- [Features](https://github.com/BOM-98/project_1#features)
-    - [Navigation Bar](https://github.com/BOM-98/project_1#navigation-bar)
-    - [The Landing Page](https://github.com/BOM-98/project_1#the-landing-page)
-    - [Toggle-Enabled Tab Content Section](https://github.com/BOM-98/project_1#toggle-enabled-tab-content-section)
-    - [Mailing List Section](https://github.com/BOM-98/project_1#mailing-list-section)
-    - [The Footer](https://github.com/BOM-98/project_1#the-footer)
-    - [Blog Home Page](https://github.com/BOM-98/project_1#blog-home-page)
-    - [Article Pages](https://github.com/BOM-98/project_1#article-pages)
-    - [Sign Up Page](https://github.com/BOM-98/project_1#the-sign-up-page)
+- [Introduction](https://github.com/BOM-98/mental-maths-project-2#introduction)
+- [Design Choices](https://github.com/BOM-98/mental-maths-project-2#design-choices)
+- [Features](https://github.com/BOM-98/mental-maths-project-2#features)
 - [Features Left to Implement](https://github.com/BOM-98/project_1#features-left-to-implement)
-- [Technologies Used](https://github.com/BOM-98/project_1#technologies-used)
-- [Testing](https://github.com/BOM-98/project_1#testing)
-    - [Validator Testing](https://github.com/BOM-98/project_1#validator-testing)
-    - [Manual Testing](https://github.com/BOM-98/project_1#manual-testing)
-- [Deployment](https://github.com/BOM-98/project_1#deployment)
-- [Bugs/Issues](https://github.com/BOM-98/project_1/blob/main/README.md#bugs--issues)
-- [Credits](https://github.com/BOM-98/project_1#credits)
-    - [Layouts](https://github.com/BOM-98/project_1#layouts)
-    - [Blog Content](https://github.com/BOM-98/project_1#blog-content)
-    - [Images](https://github.com/BOM-98/project_1#images)
-    - [Favicon](https://github.com/BOM-98/project_1#favicon)
-    - [Wireframes](https://github.com/BOM-98/project_1#wireframes)
-- [Acknowledgements](https://github.com/BOM-98/project_1/blob/main/README.md#acknowledgements)
+- [Technologies Used](https://github.com/BOM-98/mental-maths-project-2#technologies-used)
+- [Javascript Logic](https://github.com/BOM-98/mental-maths-project-2#javascript-logic)
+- [Testing](https://github.com/BOM-98/mental-maths-project-2#testing)
+- [Deployment](https://github.com/BOM-98/mental-maths-project-2#deployment)
+- [Bugs/Issues](https://github.com/BOM-98/mental-maths-project-2#bugs--issues)
+- [Credits](https://github.com/BOM-98/mental-maths-project-2#credits)
+- [Acknowledgements](https://github.com/BOM-98/mental-maths-project-2#acknowledgements)
 
 ## Introduction
 
@@ -124,7 +106,7 @@ All design decisions incorporated into the web app were made keeping these targe
 5. Warning Color: Red (#FF0000)
    - A sharp color to draw attention to timers that are about to run out or scores that have fallen low. This red will only be displayed dynamically as indicators on the screen show the user is running out of time or performing poorly.
 
-Accessibility and contrast considerations:
+#### Accessibility and contrast considerations:
 
 When designing the website, it's crucial to ensure that the color contrast ratios meet the Web Content Accessibility Guidelines (WCAG) standards. This will guarantee that users with visual impairments can easily access and navigate the site.
 
@@ -214,13 +196,13 @@ The Mental Arithmetic website has numerous features, including an instruction mo
 
 ![Statistics Container](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/statistics-container.png)
 
-#### Question Counter
+- #### Question Counter
 
 -   The quesiton counter is displayed within the statistics container and increments every time the user answers a question. 
 
 ![Question Counter](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/question-counter.png)
 
-#### User Level Indicator
+- #### User Level Indicator
 
 -   The user level indicator tells the user what level they are on.
 -   Every time the user answers a question, it is recorded as an object using a factory function (answerObject as seen below) with key value pairs that contain their answer, the correct answer, the question number, if their answer was correct, the time on the timer when the question was answered and if they passed the question (whether the answer is correct and answered in under 60 seconds and the level of the question). 
@@ -258,7 +240,7 @@ export const answerObject = (
 };
 ```
 
-#### Timer
+- #### Timer
 
 -   The timer is controled using an the timer object as seen below.
 -   The timer tells the user how long them have left to answer the question.
@@ -306,7 +288,7 @@ export let timer = {
 };
 ```
 
-#### Score Keeper
+- #### Score Keeper
 
 -   The score keeper tells the user what percentage of questions they have 'passed'. 
 -   To pass the user much have submitted the correct answer and in under 60 seconds.
@@ -345,7 +327,7 @@ export function updatePercentage(answerArray) {
 }
 ```
 
-### Responsive Input Buttons
+- ### Responsive Input Buttons
 
 -   If the screen is smaller than 400px, as on most phones, a keyboard pops up on screen when the user attempts to insert an input. This creates some issues from a usability perspective as it can hide certain elements behind the keyboard creating a negative user experience.  
 -   To account for this, I have inserted my own keyboard for the user that pops up when the screen is smaller than 400px.
@@ -353,7 +335,7 @@ export function updatePercentage(answerArray) {
 
 ![responsive-input-buttons](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/responsive-input-buttons.png)
 
-### Submit and Reset Buttons
+- ### Submit and Reset Buttons
 
 -   The user can submit questions using the submit button if they would prefer. 
 -   The user can also restart the whole game by pressing/clicking the reset button which refreshes the whole page and starts the game again. 
@@ -396,7 +378,9 @@ To ensure the site functions appropriately I conducted several tests. This inclu
        Desktop
        ![PageSpeed Desktop](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/desktop-pagespeedIndex.png)
        Mobile
-       ![PageSpeed Mobile](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/mobile-pageSpeed-index.png) 
+       ![PageSpeed Mobile](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/mobile-pageSpeed-index.png)
+-   JavaScript
+      - No errors were found when passing through jshint.com(https://jshint.com/)
        
 ### Manual Testing
 
