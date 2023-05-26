@@ -300,7 +300,7 @@ const manageCalculator = function () {
     //get display input
     const display = document.getElementById("answer");
     //enable virtual keyboard for edge cases where phone is larger than 450px
-    display.setAttribute("readonly", false);
+    display.removeAttribute("readonly");
   }
 };
 
