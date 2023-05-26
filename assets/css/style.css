@@ -410,9 +410,9 @@ footer {
   }
 }
 
-/*Further styling adjustments for screens smaller than 450px wide.
+/*Further styling adjustments for screens smaller than 400px wide.
   Here we make more dramatic layout changes to accommodate very small screens.*/
-@media all and (max-width: 450px) {
+@media all and (max-width: 400px) {
   /* We set the body to a maximum width of 95% of the viewport width and align content to the start of the flex container.*/
   body {
     max-width: 95vw;
