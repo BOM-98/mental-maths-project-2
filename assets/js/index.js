@@ -231,6 +231,9 @@ const manageCalculator = function () {
       // create and append display input
       const display = document.getElementById("answer");
 
+      //remove virtual keyboard from display
+      display.setAttribute("readonly", true);
+
       // create and append buttons container
       const buttons = document.createElement("div");
       buttons.className = "buttons";
@@ -290,6 +293,11 @@ const manageCalculator = function () {
     }
     // set calculatorAdded to false
     calculatorAdded = false;
+
+    //get display input
+    const display = document.getElementById("answer");
+    //enable virtual keyboard for edge cases where phone is larger than 400px
+    display.setAttribute("readonly", false);
   }
 };
 
