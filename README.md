@@ -26,7 +26,7 @@ The brain's ability to grow new neurons to adapt to a stimulus, known as neuropl
 
 The Mental Maths Trainer is an online application that will offer several advantages, including higher performance in daily activities, increased neuroplasticity, and improved cognitive capacities. Users may get these benefits and see a good influence on their general cognitive development and daily lives by regularly practicing mental arithmetic with Mental Maths Trainer. Users will be working in an optimal environment that maximizes the development of their working memory, problem-solving skills, and task-focus.
 
-The game has no end, the goal is to reach level 18 of the game, but if someone reaches level 18 they can continue for as long as they wish. This is to avoid putting restrictions on how long someone would like to train for. 
+The game has no end, the goal is to reach level 18 of the game, but if someone reaches level 18 they can continue for as long as they wish. This is to avoid putting restrictions on how long someone would like to train for. From testing the app with people it shows that the average person gets stuck on level 9 - see if you can beat it!
 
 
 ![Header Image](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/am-i-responsive-displays.png)
