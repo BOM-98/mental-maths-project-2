@@ -23,6 +23,9 @@ let answerInstance;
 //calculatorAdded is used to ensure that the calculator is only added once and not multiple times if the screen size is changed
 let calculatorAdded = false;
 
+// define variable to update when input buttons are clicked on screen <450px
+let output = "";
+
 // Get the modal
 let modal = document.getElementById("myModal");
 
@@ -151,12 +154,14 @@ function checkAnswer() {
     alert("Correct Answer - Well Done!");
     incrementQuestion();
     updatePercentage(answerArray);
+    output = "";
   } else {
     alert(
       `${userAnswer} is incorrect. The correct answer was ${calculatedAnswer}!`
     );
     incrementQuestion();
     updatePercentage(answerArray);
+    output = "";
   }
 
   adjustLevel(answerArray);
@@ -194,10 +199,10 @@ window.onclick = function (event) {
  * Manages the display of question text within the stats container based on the current window width.
  *
  * This function dynamically updates the display text of the element with id "question-stat" based on the window's inner width.
- * If the window width is less than 400px, the function sets the display text to "Q". Otherwise, it sets the display text to "Question".
+ * If the window width is less than 450px, the function sets the display text to "Q". Otherwise, it sets the display text to "Question".
  */
 const questionTextManager = function () {
-  if (window.innerWidth < 400) {
+  if (window.innerWidth < 450) {
     this.document.getElementById("question-stat").innerHTML = "Q";
   } else {
     this.document.getElementById("question-stat").innerHTML = "Question";
@@ -208,8 +213,8 @@ const questionTextManager = function () {
  * Manages the display of the calculator based on the current window width.
  *
  * This function dynamically appends a calculator to the DOM or removes it based on the window's inner width.
- * If the window width is less than 400px and the calculator is not yet added, the function creates and appends a calculator.
- * If the window width is equal or larger than 400px and the calculator exists, it removes the calculator from the DOM.
+ * If the window width is less than 450px and the calculator is not yet added, the function creates and appends a calculator.
+ * If the window width is equal or larger than 450px and the calculator exists, it removes the calculator from the DOM.
  *
  * The calculator consists of a display input element and a set of buttons, each assigned a unique value.
  * Clicking a button will trigger a calculation function that updates the display's value based on the clicked button's value.
@@ -219,8 +224,8 @@ const manageCalculator = function () {
   // Get the calculator div
   const calculatorDiv = document.getElementById("calculator");
 
-  // Check if screen size is less than 400px
-  if (window.innerWidth < 400) {
+  // Check if screen size is less than 450px
+  if (window.innerWidth < 450) {
     // Check if calculator is not added yet
     if (!calculatorAdded) {
       // create main calculator container
@@ -255,8 +260,6 @@ const manageCalculator = function () {
         "0",
       ];
 
-      // define function to calculate based on button clicked
-      let output = "";
       const calculate = (btnValue) => {
         display.focus();
         if (btnValue === "AC") {
@@ -296,7 +299,7 @@ const manageCalculator = function () {
 
     //get display input
     const display = document.getElementById("answer");
-    //enable virtual keyboard for edge cases where phone is larger than 400px
+    //enable virtual keyboard for edge cases where phone is larger than 450px
     display.setAttribute("readonly", false);
   }
 };
