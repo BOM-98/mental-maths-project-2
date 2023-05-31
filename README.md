@@ -409,9 +409,11 @@ There were a number of notable issues that arose while creating this website. Tw
 -  While attempting to increment questions in the game, I noticed that every time I submitted an answer my website would increment the question for a split second and then reset to zero. I attempted to debug this using stackOverflow and chrome debugger within VS code but my program would perform the way I intended within the debugger and questions incremented with each answer submission. After a number of hours I realized that my input element was enclosed within a form element, and was therefore refreshing the page every time I submitted an answer, causing the question count to reset. Once I removed the form element my program performed as expected and the question count incremented with each submitted answer.
 - While working through my program with my mentor I realized that the levels were incrementing within the DOM, but the questions were not getting more difficult. I used chrome debugger to investigate what the issue was and realized that my level parameter being passed to the adjustLevel function was stuck on 0, even though the levels were incrementing on the DOM. I later found that I had initialized a global 'level' variable that read the level from the DOM element, but was not incrementing as the user moved up levels, and it was this variable that was being passed into the function. Once I corrected this bug the program performed as expected and the questions started increasing in difficulty again.
 - The virtual keyboard on iOS and Android phones used to cover half of the screen in most cases - making it quite hard to answer the sums within the app. This created a negative user experience and make it too difficult to answer for some people who are less savvy on their phones. 
-![Virtual Keyboard Bug](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/keyboard-bug.png)
+
+<img src="https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/keyboard-bug.png" height="50%">
+
 To solve this I removed the keyboard on mobile phones by adding the onreadonly attribute to the input box as seen below: 
-![Keyboard Bug Code](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/keyboard-removal-code.png)
+![Keyboard Bug Code](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/keyboard-removal-bug.png)
 As a result, users on phones that are less than 450px wide will be unable to use the default keyboard and must use the input boxes in the game. 
 
 ## Credits
