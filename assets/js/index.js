@@ -258,6 +258,8 @@ const manageCalculator = function () {
         "2",
         "3",
         "0",
+        "-",
+        "."
       ];
 
       const calculate = (btnValue) => {
