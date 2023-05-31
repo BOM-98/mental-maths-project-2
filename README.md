@@ -18,15 +18,15 @@
 
 Welcome to Mental Maths Trainer, a fun and flexible online tool that may be used to assist individuals improve their mental arithmetic abilities. Young pupils and adults looking to advance their mental agility and mathematical skill are both welcome on the platform.
 
-In order to keep users interested and challenged, Mental Maths Trainer provides a dynamic environment for learning addition, subtraction, multiplication, and division with problems that automatically increase in complexity. Our application maximizes learning potential by following the [85% rule for optimum learning](https://www.nature.com/articles/s41467-019-12552-4), to ensures that users experience the right balance of success and challenge, maximizing their learning potential. Users will progress through the app until they reach a level where they are not getting the right answer approx 15% of the time. 
+In order to keep users interested and challenged, Mental Maths Trainer provides a dynamic environment for learning addition, subtraction, multiplication, and division with problems that automatically increase in complexity. Our application maximizes learning potential by following the [85% rule for optimum learning](https://www.nature.com/articles/s41467-019-12552-4), to ensure that users experience the right balance of success and challenge, maximizing their learning potential. Users will progress through the app until they reach a level where they are not getting the right answer approximately 15% of the time. 
 
 It has been demonstrated that practicing mental arithmetic improves cognitive functioning and neuroplasticity. Users who regularly practice mental arithmetic can get a variety of advantages in addition to better math abilities. Improved working memory, attention, and processing speed have all been shown as a result of practicing mental arithmetic, according to [research](https://psycnet.apa.org/record/2012-26807-001).
 
 The brain's ability to grow new neurons to adapt to a stimulus, known as neuroplasticity, is a key driver in developing mental arithmetic skills. Studies show that performing cognitive activities like mental addition and subtraction can boost neuroplasticity, [leading to stronger connections between neurons and improved brain function](https://www.nature.com/articles/427311a).
 
-The Mental Maths Trainer is an online application that will offer several advantages, including higher performance in daily activities, increased neuroplasticity, and improved cognitive capacities. Users may get these benefits and see a good influence on their general cognitive development and daily lives by regularly practicing mental arithmetic with Mental Maths Trainer. Users will be working in an optimal environment that maximizes the development of their working memory, problem-solving skills, and task-focus.
+The Mental Maths Trainer is an online application that will offer several advantages, including higher performance in daily activities, increased neuroplasticity, and improved cognitive capacities. Users may get these benefits and see a positive influence on their general cognitive development and daily lives by regularly practicing mental arithmetic with Mental Maths Trainer. Users will be working in an optimal environment that maximizes the development of their working memory, problem-solving skills, and task-focus.
 
-The game has no end, the goal is to reach level 18 of the game, but if someone reaches level 18 they can continue for as long as they wish. This is to avoid putting restrictions on how long someone would like to train for. From testing the app with people it shows that the average person gets stuck on level 9 - see if you can beat it!
+The game has no end, the goal is to reach level 18 of the game, but if someone reaches level 18 they can continue for as long as they wish. This is to avoid putting restrictions on how long someone would like to train for. From testing the app with people, it shows that the average person gets stuck on level 9 - see if you can beat it!
 
 
 ![Header Image](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/am-i-responsive-displays.png)
@@ -176,7 +176,7 @@ The Mental Arithmetic website has numerous features, including an instruction mo
     -   The instruction modal pops up on page load to explain to the user the purpose of the website and how to play.
     -   It informs the user that there are 18 levels, and the game does not have a defined end. 
     -   The start button is highlighted to begin the game, however the user can click anywhere on the page to start.
-    -   The modal the disappears as the game starts. 
+    -   The modal then disappears as the game starts. 
 
 
 ![Instruction Modal](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/instruction-modal.png)
@@ -204,7 +204,7 @@ The Mental Arithmetic website has numerous features, including an instruction mo
 
 - #### User Level Indicator
 
--   The user level indicator tells the user what level they are on.
+-   The user level indicator tells the user what level someone is on.
 -   Every time the user answers a question, it is recorded as an object using a factory function (answerObject as seen below) with key value pairs that contain their answer, the correct answer, the question number, if their answer was correct, the time on the timer when the question was answered and if they passed the question (whether the answer is correct and answered in under 60 seconds and the level of the question). 
 -   This answer object is then added to an array which contains an object instance for every question the user has answered.
 -   This array is iterated through by the adjustLevel function and if the user has answered 4 questions on that level and their score is above 85% it will increment their level and progress them onto harder sums.  
@@ -242,17 +242,17 @@ export const answerObject = (
 
 - #### Timer
 
--   The timer is controlled using an the timer object as seen below.
--   The timer tells the user how long them have left to answer the question.
--   The timer is  decremented every second. The color of the timer box dynamically changes color depending on how much time the user has left. If the user has less than 10 seconds left, the box turns to a warning red to alert them. 
--   If the timer reaches zero, a method is called which automatically inputs 0 as an answer in the question input which is guaranteed to be wrong and calls the checkAnswer() function which submits the answer and moves on to the next question. 
+-   The timer is controlled using the timer object as seen below.
+-   The timer tells the user how long they have left to answer the question.
+-   The timer is  decremented every second. The color of the timer box dynamically changes depending on how much time the user has left. If the user has less than 10 seconds left, the box turns to a warning red to alert them. 
+-   If the timer reaches zero, a method is called by the timer object which automatically inputs 0 as an answer in the question input (which is guaranteed to be wrong) and calls the checkAnswer() function which submits the answer and moves on to the next question. 
 
 ![timer](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/timer.png)
 
 - #### Score Keeper
 
--   The score keeper tells the user what percentage of questions they have 'passed'. 
--   To pass the user much have submitted the correct answer and in under 60 seconds.
+-   The score keeper tells the user what percentage of questions the user has 'passed'. 
+-   To pass the user must have submitted the correct answer and in under 60 seconds.
 -   The user must maintain a score higher than 85% to progress to the next level. 
 -   The score keeper box dynamically changes color depending on the score the user has. It will either be red, amber or green depending on how well the user is performing.
 -   This is controlled by the updatePercentage function shown below. This function takes in an array of the object instances for each answer submitted by the user and iterates through the array to calculate the user's score and update the score keeper's color. :  
@@ -290,16 +290,17 @@ export function updatePercentage(answerArray) {
 
 - ### Responsive Input Buttons
 
--   If the screen is smaller than 400px, as on most phones, a keyboard pops up on screen when the user attempts to insert an input. This creates some issues from a usability perspective as it can hide certain elements behind the keyboard creating a negative user experience.  
--   To account for this, I have inserted my own keyboard for the user that pops up when the screen is smaller than 400px.
--   This avoids problems created by the default keyboards that pop up on android and iOS phones by avoiding the need for the user to depend on it. 
+-   If the screen is smaller than 450px, as on most phones, a keyboard pops up on screen when the user attempts to insert an input. This creates some issues from a usability perspective as it can hide certain elements behind the keyboard creating a negative user experience.  
+-   To account for this, I have inserted my own keyboard for the user that pops up when the screen is smaller than 450px.
+-   This avoids problems created by the default keyboards that pop up on android and iOS phones by avoiding the need for the user to depend on it.
+- Please note that you cannot use the default iOS / Android keyboard when playing on your phone as it has been intentionally disabled for a better user experience. 
 
 ![responsive-input-buttons](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/responsive-input-buttons.png)
 
 - ### Submit and Reset Buttons
 
--   The user can submit questions using the submit button if they would prefer. 
--   The user can also restart the whole game by pressing/clicking the reset button which refreshes the whole page and starts the game again. 
+-   The user can submit questions using the submit button if they would prefer that over pressing enter / are playing on their phone. 
+-   The user can also restart the whole game by pressing/clicking the reset button which refreshes the page. 
 
 ![submit and reset buttons](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/submit-and-reset.png)
 
@@ -331,9 +332,9 @@ I used the following technologies, platforms and support in building my project:
 - Accessibility Testing was assisted with [Wave](https://wave.webaim.org/)
 - Flow Diagrams were created using [LucidChart](https://www.lucidchart.com/)
 
-## Javascript Logic
+## JavaScript Logic
 
-Javascript was separated into three different files, index.js, math-functions.js and data-structures.js to follow best practices and separation of concerns.
+Javascript was separated into three different files, index.js, math-functions.js and data-structures.js to follow best practices regarding separation of concerns.
 
 The order and logic of the functions in the website are outlined in the diagram below. 
 
@@ -354,9 +355,9 @@ To ensure the site functions appropriately I conducted several tests. This inclu
    - Page Performance
 	   - Above 90% score across Performance, Accessibility, Best Practices & SEO on [PageSpeed Insights] for Desktop(https://pagespeed.web.dev/analysis/https-bom-98-github-io-mental-maths-project-2/g1r9b9ffwx?form_factor=desktop).
        Desktop
-       ![PageSpeed Desktop](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/desktop-pagespeedIndex.png)
+       ![PageSpeed Desktop](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/desktop-pagespeed-index.png)
        Mobile
-       ![PageSpeed Mobile](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/mobile-pageSpeed-index.png)
+       ![PageSpeed Mobile](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/mobile-page-speed-index.png)
 -   JavaScript
       - No errors were found when passing through jshint.com(https://jshint.com/)
        
@@ -372,7 +373,7 @@ To ensure the site functions appropriately I conducted several tests. This inclu
 
 ### Automated Testing
 
-  - Unit testing was implemented using Mocha. These tests ensured that the generateNum1 function worked correctly as it has to reference both the digitParameters and gameLevelSettings data structures and generate the correct digits depending on the level of the game. Over 200 tests were implemented to ensure that the function worked across 9 different values at different levels of the game. 
+  - Unit testing was implemented using Mocha. These tests ensured that the generateNum1 function worked as it has to reference both the digitParameters and gameLevelSettings data structures and generate the correct digits for the sums depending on the level of the game. Testing this function ensured that my data structures were set up properly. I prioritized this function as it was by far the most complex logic in this project. Over 200 tests were implemented to ensure that the function worked across 9 different values at different levels of the game. 
 
   ![Unit Tests 1](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests.png)
   ![Unit Tests 2](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/unit-tests-2.png)
@@ -397,7 +398,7 @@ To ensure the site functions appropriately I conducted several tests. This inclu
     - Once my changes had been committed, I pushed the changes to the remote repository using 'git push' in the terminal. 
     - In the GitHub repository, navigate to the Settings tab.
     -   From the source section drop-down menu, select the main Branch.
-    -   Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful .deployment.
+    -   Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
 The live link can be found [here](https://bom-98.github.io/mental-maths-project-2/). 
 
@@ -406,18 +407,23 @@ The live link can be found [here](https://bom-98.github.io/mental-maths-project-
 There were a number of notable issues that arose while creating this website. Two of the most prominent issues that have arisen are detailed below.  
 
 -  While attempting to increment questions in the game, I noticed that every time I submitted an answer my website would increment the question for a split second and then reset to zero. I attempted to debug this using stackOverflow and chrome debugger within VS code but my program would perform the way I intended within the debugger and questions incremented with each answer submission. After a number of hours I realized that my input element was enclosed within a form element, and was therefore refreshing the page every time I submitted an answer, causing the question count to reset. Once I removed the form element my program performed as expected and the question count incremented with each submitted answer.
-- While working through my program with my mentor I realized that my levels were incrementing within the DOM but the questions were not getting any more difficult.  I used chrome debugger to investigate what the issue was and realized that my level parameter being passed to the adjustLevel function was stuck on 0, even though the levels were incrementing on the DOM. I later found that I had initialized a level variable globally that read the level from the dom element, but was not incrementing as the user moved up levels, and it was this variable that was being passed into the function. Once I corrected this bug the program performed as expected and the questions started increasing in difficulty again. 
+- While working through my program with my mentor I realized that the levels were incrementing within the DOM, but the questions were not getting more difficult. I used chrome debugger to investigate what the issue was and realized that my level parameter being passed to the adjustLevel function was stuck on 0, even though the levels were incrementing on the DOM. I later found that I had initialized a global 'level' variable that read the level from the DOM element, but was not incrementing as the user moved up levels, and it was this variable that was being passed into the function. Once I corrected this bug the program performed as expected and the questions started increasing in difficulty again.
+- The virtual keyboard on iOS and Android phones used to cover half of the screen in most cases - making it quite hard to answer the sums within the app. This created a negative user experience and make it too difficult to answer for some people who are less savvy on their phones. 
+![Virtual Keyboard Bug](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/keyboard-bug.png)
+To solve this I removed the keyboard on mobile phones by adding the onreadonly attribute to the input box as seen below: 
+![Keyboard Bug Code](https://github.com/BOM-98/mental-maths-project-2/blob/main/assets/images/keyboard-removal-code.png)
+As a result, users on phones that are less than 450px wide will be unable to use the default keyboard and must use the input boxes in the game. 
 
 ## Credits
 
 ### Resources
 
-- Codecademy provide a free online course [Introduction to UI and UX Design](https://www.codecademy.com/courses/intro-to-ui-ux/informationals/ui-and-ux-welcome) which taught me the basics of how to design prototypes on Figma. This came in very handy during this project as I wireframed by web app and thought through the color scheme and typography choices I had to make.
+- Codecademy provide a free online course [Introduction to UI and UX Design](https://www.codecademy.com/courses/intro-to-ui-ux/informationals/ui-and-ux-welcome) which taught me the basics of how to design prototypes on Figma. This came in very handy during this project as I wireframed my web app and thought through the color scheme and typography choices I had to make.
 - Designing the website followed the [10 usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) from the Nielsen Norman Group to ensure my web app was easy to navigate, understand and learn from.
 - Unit testing was implemented by following Codecademy's course on [Javascript Testing](https://www.codecademy.com/career-journey/full-stack-engineer/path/fscj-22-front-end-development/track/fscj-22-javascript-testing).
 - Implementing modules using ES6 Syntax was done by following Codecademy's course on [Javascript Modules](https://www.codecademy.com/journeys/full-stack-engineer/paths/fscj-22-front-end-development/tracks/fscj-22-javascript-syntax-part-iii/modules/wdcp-22-learn-javascript-syntax-modules-7ac62a4b-087e-4517-9b13-cc0e94b8495d/articles/implementing-modules-using-es-6-syntax).
 - Code for the calculator on the mobile version of the app was found in [Coding Nepal's Website](https://www.codingnepalweb.com/calculator-html-css-javascript/).
-- The favicon was generated and uploaded following instructions from [favicon.io](https://favicon.io/favicon-converter/)
+- The favicon was generated and uploaded following instructions from [favicon.io](https://favicon.io/favicon-converter/).
 
 
 ### Layouts
